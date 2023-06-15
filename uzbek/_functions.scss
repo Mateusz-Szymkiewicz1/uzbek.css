@@ -1,0 +1,10 @@
+@use 'sass:math';
+@function brightness($color) {
+    @return math.div(((red($color) * .299) + (green($color) * .587) + (blue($color) * .114)), 255) * 100%;
+}
+@function color-contrast($color) {
+    $color-brightness: brightness($color);  
+    $light-text-brightness: brightness(white);
+    $dark-text-brightness: brightness(black);
+    @return if(abs($color-brightness - $light-text-brightness) > abs($color-brightness - $dark-text-brightness), white, black);  
+}

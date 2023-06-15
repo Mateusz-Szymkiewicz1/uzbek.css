@@ -1,11 +1,17 @@
-$green: #018281;
+$teal: #018281;
+$error: #d63031;
+$navy: #010081;
+$warn: #dfe300;
 $blue_gradient: linear-gradient(90deg,navy,#1084d0);
 
 $colors: (
-  "green": $green,
+  "teal": $teal,
   "silver": silver,
   "white": white,
-  "black": black
+  "black": black,
+  "error": $error,
+  "navy": $navy,
+  "warn": $warn
 );
 
 // spacing
@@ -17,10 +23,11 @@ $base-border-thickness: 1px;
 $base-border-radius: 20px;
 
 // box-shadow
-$base-box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+$base-box-shadow: 2px 6px 10px rgba(0,0,0,0.2);
 
 // font sizes
 $base-font-size: 2rem;
+$font-size-xs: $base-font-size * 0.5;
 $font-size-sm: $base-font-size * 0.75;
 $font-size-lg: $base-font-size * 1.5;
 $font-size-xl: $base-font-size * 2;

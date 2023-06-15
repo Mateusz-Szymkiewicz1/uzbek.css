@@ -151,6 +151,7 @@ $utilities: (
   "font-size": (
     "prefix": "font",
     "values": (
+      "xs": $font-size-xs,
       "sm": $font-size-sm,
       "md": $base-font-size,
       "lg": $font-size-lg,
@@ -174,6 +175,44 @@ $utilities: (
       .#{$prefix}-#{$k}{
         #{$property}: $v;
       }
+    }
+  }
+}
+
+@for $i from 0 through 5{
+  @if($i > 0){
+    .my-#{$i}{
+      margin-top: $base-margin*math.pow(2,$i - 1);
+      margin-bottom: $base-margin*math.pow(2,$i - 1);
+    }
+    .mx-#{$i}{
+      margin-right: $base-margin*math.pow(2,$i - 1);
+      margin-left: $base-margin*math.pow(2,$i - 1);
+    }
+    .py-#{$i}{
+      padding-top: $base-margin*math.pow(2,$i - 1);
+      padding-bottom: $base-margin*math.pow(2,$i - 1);
+    }
+    .px-#{$i}{
+      padding-right: $base-margin*math.pow(2,$i - 1);
+      padding-left: $base-margin*math.pow(2,$i - 1);
+    }
+  }@else{
+    .my-#{$i}{
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .mx-#{$i}{
+      margin-right: 0;
+      margin-left: 0;
+    }
+    .py-#{$i}{
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    .px-#{$i}{
+      padding-right: 0;
+      padding-left: 0;
     }
   }
 }

@@ -1,13 +1,12 @@
-@mixin navbar($bg:$green){
+@mixin navbar($bg:$teal){
     width: 100%;
-    position: fixed;
-    top: 0;
     height: 80px;
     display: flex;
     background: $bg;
     align-items: center;
-    font-size: $font-size-md;
-    
+    font-size: $font-size-sm;
+    box-shadow: $base-box-shadow;
+  
     .title{
         font-size: $font-size-lg;
     }
