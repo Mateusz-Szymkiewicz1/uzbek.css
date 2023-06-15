@@ -1,13 +1,5 @@
-$colors: (
-    "green": #018281,
-    "silver": silver,
-    "white": white,
-    "black": black
-);
-$blue_gradient: linear-gradient(90deg,navy,#1084d0);
-
 @each $key,$val in $colors{
-    .text-#{$key}{
+    .txt-#{$key}{
         color: $val;
     }
     .bg-#{$key}{

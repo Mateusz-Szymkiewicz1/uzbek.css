@@ -1,4 +1,5 @@
 // functions, variables
+@import 'variables';
 
 // base, layout
 @import 'base';
@@ -8,5 +9,7 @@
 @import 'colors';
 
 // components
+@import 'components/navbar';
 
 // utilities
+@import 'utilities';

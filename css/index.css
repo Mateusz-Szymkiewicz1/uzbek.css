@@ -1,1 +1,1 @@
-*{color:inherit;margin:0}.bg-green{background:#018281}.text-white{color:#fff}
+@import"https://fonts.googleapis.com/css2?family=VT323&display=swap";*{color:inherit;margin:0;font-family:"VT323"}.container{width:100%;max-width:1200px;margin:0 auto;padding:0 20px;box-sizing:border-box}.txt-white{color:#fff}.navbar{width:100%;position:fixed;top:0;height:80px;display:flex;background:#018281;align-items:center}.navbar .title{font-size:3rem}.navbar .container{display:flex;justify-content:space-between;align-items:center}

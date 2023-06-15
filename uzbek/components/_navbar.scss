@@ -1,0 +1,29 @@
+@mixin navbar($bg:$green){
+    width: 100%;
+    position: fixed;
+    top: 0;
+    height: 80px;
+    display: flex;
+    background: $bg;
+    align-items: center;
+    font-size: $font-size-md;
+    
+    .title{
+        font-size: $font-size-lg;
+    }
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.navbar{
+    @include navbar;
+}
+
+@each $key,$val in $colors{
+    .navbar-#{$key}{
+        @include navbar($val);
+    }
+}
