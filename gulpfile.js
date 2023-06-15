@@ -10,7 +10,7 @@ function buildStyles() {
 }
 
 function watchTask() {
-  watch(['uzbek/**/*.scss'], buildStyles)
+  watch(['uzbek/**/*.scss', '*.html'], buildStyles)
 }
 
 exports.default = series(buildStyles, watchTask)
