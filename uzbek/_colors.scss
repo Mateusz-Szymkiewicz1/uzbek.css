@@ -2,23 +2,43 @@
     .txt-#{$key}{
         color: $val;
     }
+    .txt-hover-#{$key}:hover{
+        color: $val;
+    }
     .bg-#{$key}{
         background: $val;
         color: color-contrast($val);
+    }
+    .bg-hover-#{$key}:hover{
+        background: $val;
     }
   @for $i from 1 through 4{
     @if($val != black and $val != white){
       .txt-#{$key}-dark-#{$i}{
         color: mix(black,$val,$i*10%);
       }
+      .txt-hover-#{$key}-dark-#{$i}:hover{
+        color: mix(black,$val,$i*10%);
+      }
       .txt-#{$key}-light-#{$i}{
+        color: mix(white,$val,$i*10%);
+      }
+      .txt-hover-#{$key}-light-#{$i}:hover{
         color: mix(white,$val,$i*10%);
       }
       .bg-#{$key}-dark-#{$i}{
         background: mix(black,$val,$i*10%);
         color: color-contrast(mix(black,$val,$i*10%));
       }
+      .bg-hover-#{$key}-dark-#{$i}:hover{
+        background: mix(black,$val,$i*10%);
+        color: color-contrast(mix(black,$val,$i*10%));
+      }
       .bg-#{$key}-light-#{$i}{
+        background: mix(white,$val,$i*10%);
+        color: color-contrast(mix(black,$val,$i*10%));
+      }
+      .bg-hover-#{$key}-light-#{$i}:hover{
         background: mix(white,$val,$i*10%);
         color: color-contrast(mix(black,$val,$i*10%));
       }

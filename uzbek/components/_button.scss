@@ -1,0 +1,23 @@
+.btn{
+  width: 160px;
+  height: 50px;
+  outline: none;
+  cursor: pointer;
+  font-size: $font-size-sm;
+  background: silver;
+  border: 0;
+}
+
+@each $key,$val in $colors{
+  .btn-#{$key}{
+    @extend .btn;
+    background: $val;
+    color: color-contrast($val);
+  }
+  .btn-#{$key}-outlined{
+    @extend .btn;
+    background: transparent;
+    border: 1px solid $val;
+    color: $val;
+  }
+}

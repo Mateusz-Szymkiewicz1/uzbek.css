@@ -5,12 +5,14 @@
 // base, layout
 @import 'base';
 @import 'layout';
+@import 'animations';
 
 // colors
 @import 'colors';
 
 // components
 @import 'components/navbar';
+@import 'components/button';
 
 // utilities
 @import 'utilities';
