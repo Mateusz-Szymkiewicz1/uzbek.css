@@ -3,6 +3,8 @@ $error: #d63031;
 $navy: #010081;
 $warn: #dfe300;
 $blue_gradient: linear-gradient(90deg,navy,#1084d0);
+$base-box-shadow: 2px 6px 10px rgba(0,0,0,0.2);
+$window-box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
 
 $colors: (
   "teal": $teal,
@@ -21,9 +23,6 @@ $base-margin: 0.75rem;
 // borders
 $base-border-thickness: 1px;
 $base-border-radius: 20px;
-
-// box-shadow
-$base-box-shadow: 2px 6px 10px rgba(0,0,0,0.2);
 
 // font sizes
 $base-font-size: 2rem;
