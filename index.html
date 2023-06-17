@@ -6,16 +6,30 @@
     <title>Uzbek.css</title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="icon" href="favicon.ico">
+    <script src="https://kit.fontawesome.com/e603884ebd.js" crossorigin="anonymous"></script>
+    <script src="index.js" defer></script>
+    <style>
+      .fa{
+        cursor: pointer;
+      }
+      .dark{
+        background: #202020;
+        color: #efefef;
+      }
+    </style>
 </head>
 <body>
     <div class="navbar txt-white">
         <div class="container">
             <div class="title"><a href="index.html">Uzbek.css</a></div>
-            <span>Lightweight css library straight from central asia.</span>
+            <span>Lightweight css library straight from central asia.&nbsp;&nbsp;<i class="fa fa-sun"></i></span>
         </div>
     </div>
     <div class="container pt-4">
-      <h2 class="font-md mb-2">Colors</h2>
+      <h2 class="font-md mb-2 mt-1">About</h2>
+      <p class="font-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quos eos iusto reprehenderit eum eaque sapiente mollitia fugit, rerum debitis, odio amet ut unde adipisci, at voluptates necessitatibus aliquam laborum ab obcaecati itaque qui magnam. Quis, consequatur? Possimus, inventore fuga magni accusamus tenetur expedita, accusantium atque quidem tempore, non, itaque.</p>
+      <br/><br/>
+      <h2 class="font-md mb-2 mt-5">Colors</h2>
       <span class="txt-teal font-sm">teal text</span><span>|</span>
       <span class="txt-silver font-sm">silver text</span><span>|</span>
       <span class="txt-error font-sm">error text</span><span>|</span>
@@ -28,15 +42,18 @@
       <span class="bg-warn font-sm">warn bg</span><span>|</span>
       <span class="bg-navy font-sm">navy bg</span>
       <br/><br/>
-      <span class="bg-teal-dark-4 font-sm">teal-dark-4</span><span>|</span>
-      <span class="bg-teal-dark-3 font-sm">teal-dark-3</span><span>|</span>
-      <span class="bg-teal-dark-2 font-sm">teal-dark-2</span><span>|</span>
-      <span class="bg-teal-dark-1 font-sm">teal-dark-1</span><span>|</span>
-      <span class="bg-teal font-sm">teal</span><span>|</span>
-      <span class="bg-teal-light-1 font-sm">teal-light-1</span><span>|</span>
-      <span class="bg-teal-light-2 font-sm">teal-light-2</span><span>|</span>
-      <span class="bg-teal-light-3 font-sm">teal-light-3</span><span>|</span>
-      <span class="bg-teal-light-4 font-sm">teal-light-4</span><br/><br/>
+      <div class="display-f" style="flex-wrap: wrap; gap: 10px;">
+        <span class="bg-teal-dark-4 font-sm">teal-dark-4</span><span>|</span>
+        <span class="bg-teal-dark-3 font-sm">teal-dark-3</span><span>|</span>
+        <span class="bg-teal-dark-2 font-sm">teal-dark-2</span><span>|</span>
+        <span class="bg-teal-dark-1 font-sm">teal-dark-1</span><span>|</span>
+        <span class="bg-teal font-sm">teal</span><span>|</span>
+        <span class="bg-teal-light-1 font-sm">teal-light-1</span><span>|</span>
+        <span class="bg-teal-light-2 font-sm">teal-light-2</span><span>|</span>
+        <span class="bg-teal-light-3 font-sm">teal-light-3</span><span>|</span>
+        <span class="bg-teal-light-4 font-sm">teal-light-4</span>
+      </div>
+      <br/>
       <span class="txt-silver txt-hover-silver-dark-2 font-sm link">hover me</span><span>|</span>
       <span class="txt-teal txt-hover-error smooth font-sm link">hover me</span><span>|</span>
       <span class="bg-warn bg-hover-warn-dark-2 font-sm link">hover me</span><span>|</span>
@@ -49,13 +66,15 @@
       <span class="font-lg">this is large font</span><br/>
       <span class="font-xl">this is extra large font</span>
       <h2 class="mt-4 mb-2 font-md ">Buttons</h2>
-      <button class="btn">default btn</button>
-      <button class="btn-teal">click me</button>
-      <button class="btn-error bg-hover-error-dark-2 smooth">click me</button>
-      <button class="btn-warn bg-hover-silver">click me</button>
-      <button class="btn-navy disabled">click me</button>
-      <button class="btn-teal-outlined">click me</button>
-      <button class="btn-navy-outlined bg-hover-navy smooth txt-hover-white">click me</button>
+      <div class="display-f" style="flex-wrap: wrap;gap:10px;">
+        <button class="btn">default btn</button>
+        <button class="btn-teal">click me</button>
+        <button class="btn-error box-shadow bg-hover-error-dark-2 smooth">click me</button>
+        <button class="btn-warn bg-hover-silver">click me</button>
+        <button class="btn-navy disabled">click me</button>
+        <button class="btn-teal-outlined box-shadow">click me</button>
+        <button class="btn-error-outlined bg-hover-error smooth txt-hover-white">click me</button>
+      </div>
       <h2 class="mt-4 mb-2 font-md ">Windows</h2>
       <div class="window mr-2" style="float: left;">
         <div class="title">window.exe
