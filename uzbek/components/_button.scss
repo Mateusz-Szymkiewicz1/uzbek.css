@@ -6,17 +6,25 @@
   font-size: $font-size-sm;
   background: silver;
   border: 0;
+  box-shadow: $window-box-shadow;
+}
+
+.btn.disabled{
+  filter: contrast(0.15);
+  pointer-events: none;
 }
 
 @each $key,$val in $colors{
   .btn-#{$key}{
     @extend .btn;
+    box-shadow: none;
     background: $val;
     color: color-contrast($val);
   }
   .btn-#{$key}-outlined{
     @extend .btn;
     background: transparent;
+    box-shadow: none;
     border: 1px solid $val;
     color: $val;
   }

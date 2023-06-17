@@ -40,4 +40,17 @@
   .window-body{
     padding: 10px;
   }
+  .status-bar{
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    margin: 10px 0 2px 2px;
+    padding-right: 2px;
+    
+    & > *{
+      box-shadow:inset -1px -1px #dfdfdf, inset 1px 1px grey;
+      padding: 3px;
+      flex-grow: 1;
+    }
+  }
 }
