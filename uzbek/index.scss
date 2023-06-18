@@ -4,6 +4,7 @@
 
 // base, layout
 @import 'base';
+@import 'breakpoints';
 @import 'layout';
 @import 'animations';
 
@@ -14,6 +15,7 @@
 @import 'components/navbar';
 @import 'components/button';
 @import 'components/window';
+@import 'components/card';
 
 // utilities
 @import 'utilities';

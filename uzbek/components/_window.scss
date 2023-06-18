@@ -3,6 +3,7 @@
   box-shadow: $window-box-shadow;
   width: 250px;
   padding: 3px;
+  color: #000;
   
   .title{
     background: $blue-gradient;
@@ -44,7 +45,7 @@
     box-sizing: border-box;
     width: 100%;
     display: flex;
-    margin: 10px 0 2px 2px;
+    margin: 10px 0 2px 1px;
     padding-right: 2px;
     
     & > *{

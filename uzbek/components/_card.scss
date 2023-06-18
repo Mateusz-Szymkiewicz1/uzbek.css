@@ -1,0 +1,17 @@
+.card{
+  box-shadow: $base-box-shadow;
+  border: 1px solid silver;
+  min-width: 100px;
+  min-height: 100px;
+  padding: 15px;
+  
+  .title{
+    font-size: $base-font-size;
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+  & > *:not(.title){
+    font-size: $font-size-sm - 0.2rem;
+  }
+}
