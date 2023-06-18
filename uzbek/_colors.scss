@@ -12,6 +12,14 @@
     .bg-hover-#{$key}:hover{
         background: $val;
     }
+    .highlight-row-#{$key} tr:not(:first-child):hover{
+      background: $val;
+      color: color-contrast($val);
+    }
+    .highlight-cell-#{$key} td:hover{
+      background: $val;
+      color: color-contrast($val);
+    }
   @for $i from 1 through 4{
     @if($val != black and $val != white){
       .txt-#{$key}-dark-#{$i}{
@@ -41,6 +49,22 @@
       .bg-hover-#{$key}-light-#{$i}:hover{
         background: mix(white,$val,$i*10%);
         color: color-contrast(mix(black,$val,$i*10%));
+      }
+      .highlight-row-#{$key}-light-#{$i} tr:not(:first-child):hover{
+        background: mix(white,$val,$i*10%);
+        color: color-contrast($val);
+      }
+      .highlight-row-#{$key}-dark-#{$i} tr:not(:first-child):hover{
+        background: mix(black,$val,$i*10%);
+        color: color-contrast($val);
+      }
+      .highlight-cell-#{$key}-light-#{$i} td:hover{
+        background: mix(white,$val,$i*10%);
+        color: color-contrast($val);
+      }
+      .highlight-cell-#{$key}-dark-#{$i} td:hover{
+        background: mix(black,$val,$i*10%);
+        color: color-contrast($val);
       }
     }
   }
