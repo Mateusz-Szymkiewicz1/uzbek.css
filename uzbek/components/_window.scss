@@ -37,6 +37,16 @@
       background-position: top 4px left 3px;
       background-repeat: no-repeat;
     }
+    .help{
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='6' height='9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23000' d='M0 1h2v2H0zM1 0h4v1H1zM4 1h2v2H4zM3 3h2v1H3zM2 4h2v2H2zM2 7h2v2H2z'/%3E%3C/svg%3E");
+      background-position: top 3px left 4px;
+      background-repeat: no-repeat;
+    }
+    .restore{
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='8' height='9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23000' d='M2 0h6v2H2zM7 2h1v4H7zM2 2h1v1H2zM6 5h1v1H6zM0 3h6v2H0zM5 5h1v4H5zM0 5h1v4H0zM1 8h4v1H1z'/%3E%3C/svg%3E");
+      background-position: top 3px left 3px;
+      background-repeat: no-repeat;
+    }
   }
   .window-body{
     padding: 10px;
