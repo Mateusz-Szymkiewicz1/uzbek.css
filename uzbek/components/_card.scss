@@ -14,4 +14,8 @@
   & > *:not(.title){
     font-size: $font-size-sm - 0.2rem;
   }
+  
+  img{
+    border: 1px solid #000;
+  }
 }

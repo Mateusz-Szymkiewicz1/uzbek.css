@@ -1,5 +1,5 @@
 input[type=text],input[type=password],input[type=email],input[type=number],textarea{
-    box-shadow: inset -1px -1px #fff,inset 1px 1px grey,inset -2px -2px #dfdfdf,inset 2px 2px #0a0a0a;
+    box-shadow: inset -1px -1px #fff,inset 1px 1px grey,inset -2px -2px #aaa,inset 2px 2px #0a0a0a;
     box-sizing: border-box;
   outline: none;
   border: 0;
@@ -8,7 +8,7 @@ input[type=text],input[type=password],input[type=email],input[type=number],texta
   color: #000;
 }
 input[type=checkbox]{
-    box-shadow: inset -1px -1px #fff,inset 1px 1px grey,inset -2px -2px #dfdfdf,inset 2px 2px #0a0a0a;
+    box-shadow: inset -1px -1px #fff,inset 1px 1px grey,inset -2px -2px #aaa,inset 2px 2px #0a0a0a;
   cursor: pointer;
   height: 15px;
   width: 15px;

@@ -90,3 +90,21 @@ $layout_values: flex-start,flex-end,center,space-between,space-around;
 .fixed{
   position: fixed !important;
 }
+
+$rounded-values: (
+  "xs": 5px,
+  "sm": 10px,
+  "md": 20px,
+  "lg": 50px,
+  "xl": 100px
+);
+
+.rounded{
+  border-radius: 50%;
+}
+
+@each $key,$val in $rounded-values{
+  .rounded-#{$key}{
+    border-radius: $val;
+  }
+}
