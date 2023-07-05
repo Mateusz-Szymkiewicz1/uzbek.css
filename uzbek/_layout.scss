@@ -108,3 +108,12 @@ $rounded-values: (
     border-radius: $val;
   }
 }
+
+@for $i from 0 through 100{
+  .w-#{$i}{
+    width: $i*1%;
+  }
+  .h-#{$i}{
+    height: $i*1%;
+  }
+}

@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="icon" href="favicon.ico">
     <script src="https://kit.fontawesome.com/e603884ebd.js" crossorigin="anonymous"></script>
+   <link href="https://unpkg.com/prismjs@v1.x/themes/prism-twilight.css" rel="stylesheet" />
+   <script src="https://unpkg.com/prismjs@v1.x/components/prism-core.min.js"></script>
+	<script src="https://unpkg.com/prismjs@v1.x/plugins/autoloader/prism-autoloader.min.js"></script>
     <script src="index.js" defer></script>
     <style>
       .fa{
@@ -18,6 +21,9 @@
       }
       .footer span{
         font-family: 'Georgia';
+      }
+      pre{
+        display: none;
       }
     </style>
 </head>
@@ -33,43 +39,51 @@
       <p class="font-sm">Uzbek.css is a CSS library created using SASS, designed for building fresh, retro websites. It comes with several utility classes and components designed to do the heavy-lifting for you. It is free to use in your personal projects, we use MIT license. You can follow us on <a href="https://github.com/Mateusz-Szymkiewicz1/uzbek.css" class="txt-teal" target="_blank">Github</a>. Feel free to contribute to the project. To learn how to use uzbek.css visit our <a class="txt-teal" href="#">documentation</a>.</p>
       <br/><br/>
       <h2 class="font-md mb-2 mt-5">Colors</h2>
-      <span class="txt-teal font-sm">teal text</span><span>|</span>
-      <span class="txt-silver font-sm">silver text</span><span>|</span>
-      <span class="txt-error font-sm">error text</span><span>|</span>
-      <span class="txt-warn font-sm">warn text</span><span>|</span>
-      <span class="txt-navy font-sm">navy text</span>
-      <br/><br/>
-      <span class="bg-teal font-sm">teal bg</span><span>|</span>
-      <span class="bg-silver font-sm">silver bg</span><span>|</span>
-      <span class="bg-error font-sm">error bg</span><span>|</span>
-      <span class="bg-warn font-sm">warn bg</span><span>|</span>
-      <span class="bg-navy font-sm">navy bg</span>
-      <br/><br/>
-      <div class="display-f" style="flex-wrap: wrap; gap: 10px;">
-        <span class="bg-teal-dark-4 font-sm">teal-dark-4</span><span>|</span>
-        <span class="bg-teal-dark-3 font-sm">teal-dark-3</span><span>|</span>
-        <span class="bg-teal-dark-2 font-sm">teal-dark-2</span><span>|</span>
-        <span class="bg-teal-dark-1 font-sm">teal-dark-1</span><span>|</span>
-        <span class="bg-teal font-sm">teal</span><span>|</span>
-        <span class="bg-teal-light-1 font-sm">teal-light-1</span><span>|</span>
-        <span class="bg-teal-light-2 font-sm">teal-light-2</span><span>|</span>
-        <span class="bg-teal-light-3 font-sm">teal-light-3</span><span>|</span>
-        <span class="bg-teal-light-4 font-sm">teal-light-4</span>
-      </div>
-      <br/>
-      <span class="txt-silver txt-hover-silver-dark-2 font-sm link">hover me</span><span>|</span>
-      <span class="txt-teal txt-hover-error smooth font-sm link">hover me</span><span>|</span>
-      <span class="bg-warn bg-hover-warn-dark-2 font-sm link">hover me</span><span>|</span>
-      <span class="bg-error bg-hover-navy smooth font-sm link">hover me</span><span>|</span>
-      <span class="bg-teal bg-hover-teal-light-4 smooth font-sm link">hover me</span>
+      <div class="colors">
+        <span class="txt-teal font-sm">teal text</span><span>|</span>
+        <span class="txt-silver font-sm">silver text</span><span>|</span>
+        <span class="txt-error font-sm">error text</span><span>|</span>
+        <span class="txt-warn font-sm">warn text</span><span>|</span>
+        <span class="txt-navy font-sm">navy text</span>
+        <br/><br/>
+        <span class="bg-teal font-sm">teal bg</span><span>|</span>
+        <span class="bg-silver font-sm">silver bg</span><span>|</span>
+        <span class="bg-error font-sm">error bg</span><span>|</span>
+        <span class="bg-warn font-sm">warn bg</span><span>|</span>
+        <span class="bg-navy font-sm">navy bg</span>
+        <br/><br/>
+        <div class="display-f" style="flex-wrap: wrap; gap: 10px;">
+          <span class="bg-teal-dark-4 font-sm">teal-dark-4</span><span>|</span>
+          <span class="bg-teal-dark-3 font-sm">teal-dark-3</span><span>|</span>
+          <span class="bg-teal-dark-2 font-sm">teal-dark-2</span><span>|</span>
+          <span class="bg-teal-dark-1 font-sm">teal-dark-1</span><span>|</span>
+          <span class="bg-teal font-sm">teal</span><span>|</span>
+          <span class="bg-teal-light-1 font-sm">teal-light-1</span><span>|</span>
+          <span class="bg-teal-light-2 font-sm">teal-light-2</span><span>|</span>
+          <span class="bg-teal-light-3 font-sm">teal-light-3</span><span>|</span>
+          <span class="bg-teal-light-4 font-sm">teal-light-4</span>
+        </div>
+        <br/>
+        <span class="txt-silver txt-hover-silver-dark-2 font-sm link">hover me</span><span>|</span>
+        <span class="txt-teal txt-hover-error smooth font-sm link">hover me</span><span>|</span>
+        <span class="bg-warn bg-hover-warn-dark-2 font-sm link">hover me</span><span>|</span>
+        <span class="bg-error bg-hover-navy smooth font-sm link">hover me</span><span>|</span>
+        <span class="bg-teal bg-hover-teal-light-4 smooth font-sm link">hover me</span>
+      </div><br/>
+      <p class="mt-2 font-sm link" onclick="toggle_code('colors')">show code</p>
+      <pre><code class="lang-html target colors_target"></code></pre>
       <h2 class="mt-5 mb-3 font-md ">Font sizes</h2>
-      <span class="font-xs">this is extra small font</span><br/>
-      <span class="font-sm">this is small font</span><br/>
-      <span class="font-md">this is medium font</span><br/>
-      <span class="font-lg">this is large font</span><br/>
-      <span class="font-xl">this is extra large font</span>
+      <div class="fonts">
+        <span class="font-xs">this is extra small font</span><br/>
+        <span class="font-sm">this is small font</span><br/>
+        <span class="font-md">this is medium font</span><br/>
+        <span class="font-lg">this is large font</span><br/>
+        <span class="font-xl">this is extra large font</span>
+      </div><br/>
+      <p class="mt-2 font-sm link" onclick="toggle_code('fonts')">show code</p>
+      <pre><code class="lang-html target fonts_target"></code></pre>
       <h2 class="mt-5 mb-2 font-md ">Buttons</h2>
-      <div class="display-f" style="flex-wrap: wrap;gap:10px;">
+      <div class="display-f buttons" style="flex-wrap: wrap;gap:10px;">
         <button class="btn">default btn</button>
         <button class="btn-teal">click me</button>
         <button class="btn-error box-shadow bg-hover-error-dark-2 smooth">click me</button>
@@ -77,48 +91,52 @@
         <button class="btn-navy disabled">click me</button>
         <button class="btn-teal-outlined box-shadow">click me</button>
         <button class="btn-error-outlined bg-hover-error smooth txt-hover-white">click me</button>
-      </div>
+      </div><br/>
+      <p class="mt-2 font-sm link" onclick="toggle_code('buttons')">show code</p>
+      <pre><code class="lang-html target buttons_target"></code></pre>
       <h2 class="mt-5 mb-2 font-md ">Windows</h2>
-      <div class="row gap-2">
+      <div class="row gap-2 windows">
       <div>
-      <div class="window">
-        <div class="title">window.exe
-          <button class="close"></button>
-          <button class="restore"></button>
-          <button class="minimize"></button>
+        <div class="window">
+          <div class="title">window.exe
+            <button class="close"></button>
+            <button class="restore"></button>
+            <button class="minimize"></button>
+          </div>
+          <div class="window-body font-sm">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus molestiae provident magnam eos saepe assumenda voluptatem, officia doloremque impedit sint.</p>
+          </div>
         </div>
-        <div class="window-body font-sm">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus molestiae provident magnam eos saepe assumenda voluptatem, officia doloremque impedit sint.</p>
-        </div>
-      </div>
-      </div>
-      <div>
-      <div class="window" style="width: 320px;">
-        <div class="title"><i class="fa fa-file" style="font-size: 13px;"></i>&nbsp;window(1).exe
-          <button class="close"></button>
-          <button class="help"></button>
-        </div>
-        <div class="window-body font-sm">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus molestiae provident magnam eos saepe assumenda voluptatem, officia doloremque impedit sint.</p>
-        </div>
-        <div class="status-bar">
-          <p>This is a status bar!</p>
-          <p>Help: F4</p>
-        </div>
-      </div>
       </div>
       <div>
-      <div class="window">
-        <div class="title">window(2).exe
-          <button class="close"></button>
-          <button class="maximize"></button>
-          <button class="minimize"></button>
+        <div class="window" style="width: 320px;">
+          <div class="title"><i class="fa fa-file" style="font-size: 13px;"></i>&nbsp;window(1).exe
+            <button class="close"></button>
+            <button class="help"></button>
+          </div>
+          <div class="window-body font-sm">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus molestiae provident magnam eos saepe assumenda voluptatem, officia doloremque impedit sint.</p>
+          </div>
+          <div class="status-bar">
+            <p>This is a status bar!</p>
+            <p>Help: F4</p>
+          </div>
         </div>
       </div>
+      <div>
+        <div class="window">
+          <div class="title">window(2).exe
+            <button class="close"></button>
+            <button class="maximize"></button>
+            <button class="minimize"></button>
+          </div>
+        </div>
       </div>
-      </div>
+      </div><br/>
+      <p class="mt-2 font-sm link" onclick="toggle_code('windows')">show code</p>
+      <pre><code class="lang-html target windows_target"></code></pre>
       <h2 class="pt-5 mb-2 font-md" style="clear:both">Grid</h2>
-      <div class="row gap-2">
+      <div class="row gap-2 grid">
        <div class="col-12-xs col-5-sm col-3-xl">
         <div class="card">
           <div class="title">Card 1</div>
@@ -145,9 +163,11 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, nemo.</p>
         </div>
       </div>
-      </div>
+      </div><br/>
+      <p class="mt-2 font-sm link" onclick="toggle_code('grid')">show code</p>
+      <pre><code class="lang-html target grid_target"></code></pre>
       <h2 class="mt-5 mb-3 font-md ">Tables</h2>
-      <div class="display-f" style="gap: 20px;flex-wrap: wrap;">
+      <div class="display-f tables" style="gap: 20px;flex-wrap: wrap;">
         <table class="box-shadow highlight-row-teal-light-3">
           <tr><th>First Name</th><th>Last Name</th><th>E-mail</th></tr>
           <tr><td>Lucas</td><td>Smith</td><td>example@gmail.com</td></tr>
@@ -164,23 +184,33 @@
           <tr><td>joe</td><td>23</td><td>Uruguay</td></tr>
           <tr><td>geezer</td><td>49</td><td>UK</td></tr>
         </table>
-      </div>
+      </div><br/>
+      <p class="mt-2 font-sm link" onclick="toggle_code('tables')">show code</p>
+      <pre><code class="lang-html target tables_target"></code></pre>
       <h2 class="mt-5 mb-3 font-md ">Inputs</h2>
-      <label class="font-sm">First name:</label><input class="ml-1" type="text"><br/><br/>
-      <label class="font-sm">Age:</label><input class="ml-1" type="number"><br/><br/>
-      <label class="font-sm">Password:</label><br/><input type="password"><br/><br/>
-      <input type="checkbox" class="mr-1"><label>I agree with x's Terms Of Service</label><br/><br/>
-      <label class="font-sm">Notes:</label><br/><textarea cols="30" rows="10"></textarea>
+      <div class="inputs">
+        <label class="font-sm">First name:</label><input class="ml-1" type="text"><br/><br/>
+        <label class="font-sm">Age:</label><input class="ml-1" type="number"><br/><br/>
+        <label class="font-sm">Password:</label><br/><input type="password"><br/><br/>
+        <input type="checkbox" class="mr-1"><label>I agree with x's Terms Of Service</label><br/><br/>
+        <label class="font-sm">Notes:</label><br/><textarea cols="30" rows="10"></textarea>
+      </div><br/>
+      <p class="mt-2 font-sm link" onclick="toggle_code('inputs')">show code</p>
+      <pre><code class="lang-html target inputs_target"></code></pre>
       <h2 class="mt-5 mb-3 font-md ">Badges</h2>
-      <span class="font-md">Lorem Ipsum Dolor sit amet<span class="ml-1 badge">New</span></span><br/>
-      <button style="width: 220px;" class="rounded-xs btn-teal my-2">Notifications! <span class="badge bg-warn-light-3">0</span></button><br/>
-      <div class="display-f" style="gap: 20px;flex-wrap: wrap;">
-        <span class="badge">Example</span>
-        <span class="badge bg-teal">Example</span>
-        <span class="badge bg-error">Example</span>
-        <span class="badge bg-warn">Example</span>
-        <span class="badge bg-navy">Example</span>
-      </div>
+      <div class="badges">
+        <span class="font-md">Lorem Ipsum Dolor sit amet<span class="ml-1 badge">New</span></span><br/>
+        <button style="width: 220px;" class="rounded-xs btn-teal my-2">Notifications! <span class="badge bg-warn-light-3">0</span></button><br/>
+        <div class="display-f" style="gap: 20px;flex-wrap: wrap;">
+          <span class="badge font-sm">Example</span>
+          <span class="badge bg-teal font-sm">Example</span>
+          <span class="badge bg-error font-sm">Example</span>
+          <span class="badge bg-warn font-sm">Example</span>
+          <span class="badge bg-navy font-sm">Example</span>
+        </div>
+      </div><br/>
+      <p class="mt-2 font-sm link" onclick="toggle_code('badges')">show code</p>
+      <pre><code class="lang-html target badges_target"></code></pre>
       <h2 class="mt-5 mb-3 font-md ">Contact</h2>
       <a href="https://github.com/Mateusz-Szymkiewicz1/uzbek.css" target="_blank"><i class="fa fa-github font-md mr-1"></i><span class="txt-teal font-sm">Project's repository</span></a><br/><br/>
       <a href="mailto:szymkiewiczmateusz1@gmail.com"><i class="fa fa-envelope font-md mr-1"></i><span class="txt-teal font-sm">Contact e-mail</span></a>
