@@ -1,32 +1,39 @@
+if(localStorage.getItem('uzbek_theme')){
+  if(localStorage.getItem('uzbek_theme') == 'dark'){
+    document.querySelector('.fa-sun').className = 'fa fa-moon';
+    document.body.classList.add('dark');
+  }
+}
+
 function preCode(selector) {
-		var els = Array.prototype.slice.call(document.querySelectorAll(selector), 0);
-		els.forEach(function(el) {
-			var txt = el.textContent
-				.replace(/^[\r\n]+/, "")	// strip leading newline
-				.replace(/\s+$/g, "");		// strip trailing whitespace
-			if (/^\S/gm.test(txt)) {
-				el.textContent = txt;
-				return;
-			}
-			var mat, str, re = /^[\t ]+/gm, len, min = 1e3;
-			while (mat = re.exec(txt)) {
-				len = mat[0].length;
-				if (len < min) {
-					min = len;
-					str = mat[0];
-				}
-			}
-			if (min == 1e3)
-				return;
-			el.textContent = txt.replace(new RegExp("^" + str, 'gm'), "");
-		});
-	}
+  const els = Array.prototype.slice.call(document.querySelectorAll(selector), 0);
+  els.forEach(function(el) {
+    const txt = el.textContent.replace(/^[\r\n]+/, "").replace(/\s+$/g, "");
+    if (/^\S/gm.test(txt)) {
+      el.textContent = txt;
+      return;
+    }
+    let mat, str, re = /^[\t ]+/gm, len, min = 1e3;
+    while (mat = re.exec(txt)) {
+      len = mat[0].length;
+      if (len < min) {
+		min = len;
+		str = mat[0];
+      }
+    }
+    if (min == 1e3)
+      return;
+      el.textContent = txt.replace(new RegExp("^" + str, 'gm'), "");
+    });
+}
 
 document.querySelector(".navbar i").addEventListener('click', function(e){
   if(e.target.className == 'fa fa-sun'){
+    localStorage.setItem('uzbek_theme', 'dark');
     e.target.className = 'fa fa-moon';
     document.body.classList.add('dark');
   }else{
+    localStorage.setItem('uzbek_theme', 'light');
     e.target.className = 'fa fa-sun';
     document.body.classList.remove('dark');
   }

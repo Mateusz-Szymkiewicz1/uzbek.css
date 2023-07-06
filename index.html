@@ -25,13 +25,18 @@
       pre{
         display: none;
       }
+      @media(max-width: 875px){
+        .navbar span span{
+          display: none;
+        }
+      }
     </style>
 </head>
 <body class="smooth">
     <div class="navbar txt-white">
         <div class="container">
             <div class="title"><a class="display-f" href="index.html"><img class="mr-1" src="favicon.ico" style="height:40px;width:40px;margin-top:4px;">Uzbek.css</a></div>
-            <span>Lightweight css library straight from central asia.&nbsp;&nbsp;<i class="fa fa-sun"></i></span>
+            <span><span>Lightweight css library straight from central asia.&nbsp;&nbsp;</span><i class="fa fa-sun"></i></span>
         </div>
     </div>
     <div class="container pt-4">
@@ -193,6 +198,10 @@
         <label class="font-sm">Age:</label><input class="ml-1" type="number"><br/><br/>
         <label class="font-sm">Password:</label><br/><input type="password"><br/><br/>
         <input type="checkbox" class="mr-1"><label>I agree with x's Terms Of Service</label><br/><br/>
+        <input type="radio" class="mr-1" name="radio"><label>Option 1</label><br/><br/>
+        <input type="radio" class="mr-1" name="radio"><label>Option 2</label><br/><br/>
+        <input type="radio" class="mr-1" name="radio"><label>Option 3</label><br/><br/>
+        <label>Range: </label><label>0&nbsp;</label><input type="range"><label>&nbsp;100</label><br/><br/>
         <label class="font-sm">Notes:</label><br/><textarea cols="30" rows="10"></textarea>
       </div><br/>
       <p class="mt-2 font-sm link" onclick="toggle_code('inputs')">show code</p>
