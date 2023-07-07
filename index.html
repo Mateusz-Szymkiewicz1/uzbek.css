@@ -12,7 +12,7 @@
 	<script src="https://unpkg.com/prismjs@v1.x/plugins/autoloader/prism-autoloader.min.js"></script>
     <script src="index.js" defer></script>
     <style>
-      .fa{
+      .fa-sun,.fa-moon,.fa-close{
         cursor: pointer;
       }
       .dark{
@@ -201,6 +201,12 @@
         <input type="radio" class="mr-1" name="radio"><label>Option 1</label><br/><br/>
         <input type="radio" class="mr-1" name="radio"><label>Option 2</label><br/><br/>
         <input type="radio" class="mr-1" name="radio"><label>Option 3</label><br/><br/>
+        <select>
+          <option>Choose an option...</option>
+          <option>Option1</option>
+          <option>Option2</option>
+          <option>Option3</option>
+        </select><br/><br/>
         <label>Range: </label><label>0&nbsp;</label><input type="range"><label>&nbsp;100</label><br/><br/>
         <label class="font-sm">Notes:</label><br/><textarea cols="30" rows="10"></textarea>
       </div><br/>
@@ -220,6 +226,33 @@
       </div><br/>
       <p class="mt-2 font-sm link" onclick="toggle_code('badges')">show code</p>
       <pre><code class="lang-html target badges_target"></code></pre>
+      <h2 class="mt-5 mb-3 font-md ">Alerts</h2>
+      <div class="alerts">
+        <div class="alert">Default alert - Lorem ipsum dolor sit amet.</div>
+        <div class="alert-teal mt-1">Teal alert - Lorem ipsum dolor sit amet.</div>
+        <div class="alert-error mt-1 rounded-xs">Error alert - Lorem ipsum dolor sit amet.</div>
+        <div class="alert-navy mt-1 rounded-xs">Navy alert - Lorem ipsum dolor sit amet.</div>
+        <div class="alert-white mt-1 rounded-xs">White alert - Lorem ipsum dolor sit amet.</div>
+      </div><br/>
+      <p class="mt-2 font-sm link" onclick="toggle_code('alerts')">show code</p>
+      <pre><code class="lang-html target alerts_target"></code></pre>
+      <h2 class="mt-5 mb-3 font-md ">Toasts</h2>
+      <div class="toasts row" style="gap: 14px;">
+        <div class="toast">
+          <div class="title"><span>&nbsp;<i class="fa fa-bell txt-warn-dark-2 font-xs"></i>&nbsp;Notification - Just now</span><i class="mr-1 fa fa-close txt-error"></i></div>
+          <div class="body">This is a sample text!</div>
+        </div>
+        <div class="toast">
+          <div class="title"><span>&nbsp;<i class="fa fa-warning txt-warn-dark-2 font-xs"></i>&nbsp;Warning! - Just now</span></div>
+          <div class="body bg-warn-light-4">Lorem ipsum dolor sit amet.</div>
+        </div>
+        <div class="toast">
+          <div class="title"><span>&nbsp;Remember! - 5 min ago</span></div>
+          <div class="body bg-navy-light-3">Drink water!</div>
+        </div>
+      </div><br/>
+      <p class="mt-2 font-sm link" onclick="toggle_code('toasts')">show code</p>
+      <pre><code class="lang-html target toasts_target"></code></pre>
       <h2 class="mt-5 mb-3 font-md ">Contact</h2>
       <a href="https://github.com/Mateusz-Szymkiewicz1/uzbek.css" target="_blank"><i class="fa fa-github font-md mr-1"></i><span class="txt-teal font-sm">Project's repository</span></a><br/><br/>
       <a href="mailto:szymkiewiczmateusz1@gmail.com"><i class="fa fa-envelope font-md mr-1"></i><span class="txt-teal font-sm">Contact e-mail</span></a>

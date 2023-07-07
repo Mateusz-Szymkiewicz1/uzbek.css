@@ -1,0 +1,28 @@
+.alert{
+  background: #333;
+  color: #ddd;
+  font-size: $base-font-size;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 1px solid #999;
+  box-shadow: $base-box-shadow;
+}
+
+@each $key,$val in $colors{
+  @if $val != white{
+    .alert-#{$key}{
+      @extend .alert;
+      background: $val;
+      border: 1px solid mix(white,$val,40%);
+      color: mix(white,$val,80%);
+    }
+  }@else{
+    .alert-#{$key}{
+      @extend .alert;
+      background: $val;
+      border: 1px solid mix(black,$val,40%);
+      color: mix(black,$val,80%);
+    }
+  }
+}
