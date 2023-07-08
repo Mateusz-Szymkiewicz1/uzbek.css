@@ -1,6 +1,6 @@
 {
   "name": "uzbek.css",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple, lightweight css library straight from central asia.",
   "main": "css/uzbek.css",
   "scripts": {
@@ -9,6 +9,7 @@
   "author": "Mateusz Szymkiewicz",
   "license": "ISC",
   "files": [
-    "css/uzbek.css"
+    "css/uzbek.css",
+    "uzbek/*"
   ]
 }

@@ -39,19 +39,26 @@
       }
       .side{
         border-right: 2px solid teal;
-        height: 100%;
         position: fixed;
-        top: 0;
+        top: 70px;
         left: 0;
-        width: 180px;
-        margin-top: 70px;
+        bottom: 0;
+        width: 190px;
         font-size: 22px;
+        overflow: auto;
+        padding-bottom: 20px;
       }
       .light{
         color: #a5ebeb;
       }
       li{
         margin: 3px;
+      }
+      .opacities div, .radiuses div{
+        height:70px;
+        width: 100px;
+        text-align:center;
+        padding-top: 30px;
       }
     </style>
 </head>
@@ -69,6 +76,11 @@
           <ul>
             <li class="ml-1 light"><a href="#colors">Colors</a></li>
             <li class="ml-1 light"><a href="#fonts">Font sizes</a></li>
+            <li class="ml-1 light"><a href="#margins">Margins/Paddings</a></li>
+            <li class="ml-1 light"><a href="#opacity">Opacity</a></li>
+            <li class="ml-1 light"><a href="#border_radius">Border radius</a></li>
+            <li class="ml-1 light"><a href="#display">Display</a></li>
+            <li class="ml-1 light"><a href="#other">Other</a></li>
           </ul>
         </li><br/>
         <li>Components
@@ -89,9 +101,13 @@
     <div class="container pt-5 main">
       <h2 id="start" class="font-md mb-2 mt-3">Getting started</h2>
 <!--      <p class="font-sm">Uzbek.css is a CSS library created using SASS, designed for building fresh, retro websites. It comes with several utility classes and components designed to do the heavy-lifting for you. It is free to use in your personal projects, we use MIT license. You can follow us on <a href="https://github.com/Mateusz-Szymkiewicz1/uzbek.css" class="txt-teal" target="_blank">Github</a>. Feel free to contribute to the project. To learn how to use uzbek.css visit our <a class="txt-teal" href="#">documentation</a>.</p>-->
-      <p class="font-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt ullam dicta rerum optio, repellendus et dolorum doloribus possimus eum id est quis voluptatem animi temporibus eius laboriosam suscipit. Assumenda fuga beatae deleniti perspiciatis quae dolorem, fugiat, enim in itaque corrupti provident, officia laboriosam id, minima illum tempore architecto asperiores quis!</p>
+       <h3 class="font-sm mt-3 mb-1">With NPM</h3>
+       <p class="font-sm">To use the library just install the package with the "<span class="txt-teal">npm install uzbek.css</span>" command. You should be able to use the package with the "<span class="txt-teal">import 'uzbek.css/css/uzbek.css'</span>" line in your js code, or import it into your css file with "<span class="txt-teal">@import '~uzbek.css/css/uzbek.css'</span>". If you want to modify the source code or purge unused css, you will need to install other packages, such as <span class="txt-teal">sass</span> or <span class="txt-teal">gulp</span>.</p>
+       <h3 class="font-sm mt-3 mb-1">With CDN</h3>
+       <p class="font-sm">Unfortunately, this library is not available to get using a cdn. If you want to help us - follow and star our <a class="txt-teal" target="_blank" href="https://github.com/Mateusz-Szymkiewicz1/uzbek.css">Github repository</a>.</p>
       <br/><br/>
       <h2 id="colors" class="font-md mb-2 pt-5 mt-1">Colors</h2>
+      <p class="font-sm mb-3 mt-3">Uzbek.css provides custom colors such as <span class='txt-teal'>teal</span> or <span class="txt-error">error</span>. You can use those predefined ones or add your own colors by adding them to the <span class="txt-teal">$colors</span> map in <span class="txt-teal">variables.scss</span> file. For every color, you can use automatically generated classes <span class="txt-teal">light</span> and <span class="txt-teal">dark</span> with values from 1 to 4. You can use the color names in classes such as <span class="txt-teal">.bg-x</span> or <span class="txt-teal">.txt-x</span> and in hover classes - <span class="txt-teal">.bg-hover-x</span> and <span class="txt-teal">.txt-hover-x</span>.</p>
       <div class="colors">
         <span class="txt-teal font-sm">teal text</span><span>|</span>
         <span class="txt-silver font-sm">silver text</span><span>|</span>
@@ -126,6 +142,7 @@
       <p class="mt-2 font-sm link" onclick="toggle_code('colors')">show code</p>
       <pre><code class="lang-html target colors_target"></code></pre>
       <h2 id="fonts" class="pt-5 mb-3 font-md mt-3">Font sizes</h2>
+      <p class="font-sm mt-3 mb-3">To define font sizes use the <span class="txt-teal">.font-x</span> class where x could be: xs, sm, md, lg and xl.</p>
       <div class="fonts">
         <span class="font-xs">this is extra small font</span><br/>
         <span class="font-sm">this is small font</span><br/>
@@ -135,14 +152,74 @@
       </div><br/>
       <p class="mt-2 font-sm link" onclick="toggle_code('fonts')">show code</p>
       <pre><code class="lang-html target fonts_target"></code></pre>
+      <h2 id="margins" class="pt-5 mb-2 font-md mt-3">Margins/Paddings</h2>
+      <p class="font-sm mt-3 mb-3">To define margins in your html you can use classes:<br/>
+        <span class="txt-teal">.m-x</span> ( margin )<br/>
+        <span class="txt-teal">.mt-x</span> ( margin-top )<br/>
+        <span class="txt-teal">.mr-x</span> ( margin-right )<br/>
+        <span class="txt-teal">.mb-x</span> ( margin-bottom )<br/>
+        <span class="txt-teal">.ml-x</span> ( margin-left )<br/>
+        <span class="txt-teal">.my-x</span> ( vertical margin )<br/>
+        <span class="txt-teal">.mx-x</span> ( horizontal margin )<br/><br/>
+        Same with paddings!<br/>
+        <span class="txt-teal">.p-x</span> ( padding )<br/>
+        <span class="txt-teal">.pt-x</span> ( padding-top )<br/>
+        <span class="txt-teal">.pr-x</span> ( padding-right )<br/>
+        <span class="txt-teal">.pb-x</span> ( padding-bottom )<br/>
+        <span class="txt-teal">.pl-x</span> ( padding-left )<br/>
+        <span class="txt-teal">.py-x</span> ( vertical padding )<br/>
+        <span class="txt-teal">.px-x</span> ( horizontal padding )<br/><br/>
+        "x" is a value from 0 to 5 defining the margin/padding size.
+      </p>
+      <h2 id="opacity" class="pt-5 mb-2 font-md mt-3">Opacity</h2>
+      <p class="font-sm mt-3 mb-3">To change the opacity of an element you can use the <span class="txt-teal">.o-x</span> class where x is an iteration of 10 from 0 to 100.</p>
+      <div class="opacities row" style="gap: 10px;">
+        <div class="o-100 bg-teal font-md">100</div>
+        <div class="o-90 bg-teal font-md">90</div>
+        <div class="o-80 bg-teal font-md">80</div>
+        <div class="o-60 bg-teal font-md">60</div>
+        <div class="o-40 bg-teal font-md">40</div>
+        <div class="o-20 bg-teal font-md">20</div>
+        <div class="o-0 bg-teal font-md">0</div>
+      </div><br/>
+      <p class="mt-2 font-sm link" onclick="toggle_code('opacities')">show code</p>
+      <pre><code class="lang-html target opacities_target"></code></pre>
+      <h2 id="border_radius" class="pt-5 mb-2 font-md mt-3">Border radius</h2>
+      <p class="font-sm mt-3 mb-3">To define border-radius of an element you can use the <span class="txt-teal">.rounded</span> class, that will apply 50% border-radius or <span class="txt-teal">.rounded-x</span> class, where x could be: xs, sm, md, lg or xl.</p>
+      <div class="radiuses row" style="gap: 10px;">
+        <div class="bg-teal font-md rounded-xs">xs</div>
+        <div class="bg-teal font-md rounded-sm">sm</div>
+        <div class="bg-teal font-md rounded-md">md</div>
+        <div class="bg-teal font-md rounded-lg">lg</div>
+        <div class="bg-teal font-md rounded-xl">xl</div>
+        <div class="bg-teal font-md rounded"></div>
+      </div><br/>
+      <p class="mt-2 font-sm link" onclick="toggle_code('radiuses')">show code</p>
+      <pre><code class="lang-html target radiuses_target"></code></pre>
+      <h2 id="display" class="pt-5 mb-2 font-md mt-3">Display</h2>
+      <p class="font-sm mt-3 mb-3">To define the display property of an element use the <span class="txt-teal">.display-x</span> class where x could be:<br/>
+      <span class="txt-teal">n</span> - none<br/>
+      <span class="txt-teal">b</span> - block<br/>
+      <span class="txt-teal">f</span> - flex<br/>
+      <span class="txt-teal">i</span> - inline<br/>
+      <span class="txt-teal">i-b</span> - inline-block<br/>
+      </p>
+      <h2 id="other" class="pt-5 mb-2 font-md mt-3">Other</h2>
+      <p class="font-sm mt-3 mb-3">Some addititonal classes that you can use:<br/>
+      <span class="txt-teal">.bs</span> - applies basic box-shadow<br/>
+      <span class="txt-teal">.fixed</span> - applies position: fixed; property<br/>
+      <span class="txt-teal">.smooth</span> - applies transition property<br/>
+      <span class="txt-teal">.link</span> - applies cursor: pointer; property<br/>
+      <span class="txt-teal">.container</span> - centers a div and its content<br/>
+      </p>
       <h2 id="buttons" class="pt-5 mb-2 font-md mt-3">Buttons</h2>
       <div class="display-f buttons" style="flex-wrap: wrap;gap:10px;">
         <button class="btn">default btn</button>
         <button class="btn-teal">click me</button>
-        <button class="btn-error box-shadow bg-hover-error-dark-2 smooth">click me</button>
+        <button class="btn-error bs bg-hover-error-dark-2 smooth">click me</button>
         <button class="btn-warn bg-hover-silver">click me</button>
         <button class="btn-navy disabled">click me</button>
-        <button class="btn-teal-outlined box-shadow">click me</button>
+        <button class="btn-teal-outlined bs">click me</button>
         <button class="btn-error-outlined bg-hover-error smooth txt-hover-white">click me</button>
       </div><br/>
       <p class="mt-2 font-sm link" onclick="toggle_code('buttons')">show code</p>
@@ -221,7 +298,7 @@
       <pre><code class="lang-html target grid_target"></code></pre>
       <h2 id="tables" class="pt-5 mb-3 font-md mt-3">Tables</h2>
       <div class="display-f tables" style="gap: 20px;flex-wrap: wrap;">
-        <table class="box-shadow highlight-row-teal-light-3">
+        <table class="bs highlight-row-teal-light-3">
           <tr><th>First Name</th><th>Last Name</th><th>E-mail</th></tr>
           <tr><td>Lucas</td><td>Smith</td><td>example@gmail.com</td></tr>
           <tr><td>Marie</td><td>Hammerford</td><td>marie_ford@gmail.com</td></tr>
@@ -229,7 +306,7 @@
           <tr><td>Matthew</td><td>Eagle</td><td>whateheeel@gmail.com</td></tr>
           <tr><td>Lucy</td><td>Mariott</td><td>laaaaaa@gmail.com</td></tr>
         </table>
-        <table class="box-shadow highlight-cell-warn">
+        <table class="bs highlight-cell-warn">
           <tr><th>Username</th><th>Level</th><th>Country</th></tr>
           <tr><td>dark_slayer68</td><td>2</td><td>Azerbaijan</td></tr>
           <tr><td>lorem_ipsum</td><td>17</td><td>Lithuania</td></tr>

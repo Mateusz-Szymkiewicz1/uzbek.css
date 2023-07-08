@@ -115,6 +115,7 @@ $utilities: (
   "opacity": (
     "prefix": "o",
     "values": (
+      "0": 0,
       "10": 0.1,
       "20": 0.2,
       "30": 0.3,
@@ -126,17 +127,6 @@ $utilities: (
       "90": 0.9,
       "100": 1,
     ),
-  ),
-  "border-radius": (
-    "prefix": "br",
-    "values": (
-      "default": $base-border-radius,
-      "none": 0,
-      "xs": math.div($base-border-radius, 4),
-      "sm": math.div($base-border-radius, 2),
-      "lg": $base-border-radius * 2,
-      "full": 50%,
-    )
   ),
   "display": (
     "prefix": "display",
@@ -217,6 +207,6 @@ $utilities: (
   }
 }
 
-.box-shadow{
+.bs{
   box-shadow: $base-box-shadow;
 }
