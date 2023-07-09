@@ -100,11 +100,12 @@
     </div>
     <div class="container pt-5 main">
       <h2 id="start" class="font-md mb-2 mt-3">Getting started</h2>
-<!--      <p class="font-sm">Uzbek.css is a CSS library created using SASS, designed for building fresh, retro websites. It comes with several utility classes and components designed to do the heavy-lifting for you. It is free to use in your personal projects, we use MIT license. You can follow us on <a href="https://github.com/Mateusz-Szymkiewicz1/uzbek.css" class="txt-teal" target="_blank">Github</a>. Feel free to contribute to the project. To learn how to use uzbek.css visit our <a class="txt-teal" href="#">documentation</a>.</p>-->
        <h3 class="font-sm mt-3 mb-1">With NPM</h3>
        <p class="font-sm">To use the library just install the package with the "<span class="txt-teal">npm install uzbek.css</span>" command. You should be able to use the package with the "<span class="txt-teal">import 'uzbek.css/css/uzbek.css'</span>" line in your js code, or import it into your css file with "<span class="txt-teal">@import '~uzbek.css/css/uzbek.css'</span>". If you want to modify the source code or purge unused css, you will need to install other packages, such as <span class="txt-teal">sass</span> or <span class="txt-teal">gulp</span>.</p>
        <h3 class="font-sm mt-3 mb-1">With CDN</h3>
        <p class="font-sm">Unfortunately, this library is not available to get using a cdn. If you want to help us - follow and star our <a class="txt-teal" target="_blank" href="https://github.com/Mateusz-Szymkiewicz1/uzbek.css">Github repository</a>.</p>
+       <h3 class="font-sm mt-3 mb-1">Download</h3>
+       <p class="font-sm">To download the source code <a class="txt-teal" href="uzbek.zip" download>click here</a>.</p>
       <br/><br/>
       <h2 id="colors" class="font-md mb-2 pt-5 mt-1">Colors</h2>
       <p class="font-sm mb-3 mt-3">Uzbek.css provides custom colors such as <span class='txt-teal'>teal</span> or <span class="txt-error">error</span>. You can use those predefined ones or add your own colors by adding them to the <span class="txt-teal">$colors</span> map in <span class="txt-teal">variables.scss</span> file. For every color, you can use automatically generated classes <span class="txt-teal">light</span> and <span class="txt-teal">dark</span> with values from 1 to 4. You can use the color names in classes such as <span class="txt-teal">.bg-x</span> or <span class="txt-teal">.txt-x</span> and in hover classes - <span class="txt-teal">.bg-hover-x</span> and <span class="txt-teal">.txt-hover-x</span>.</p>
@@ -213,6 +214,7 @@
       <span class="txt-teal">.container</span> - centers a div and its content<br/>
       </p>
       <h2 id="buttons" class="pt-5 mb-2 font-md mt-3">Buttons</h2>
+      <p class="font-sm mt-3 mb-3">You can use a predefined button component by adding the <span class="txt-teal">.btn</span> class to an element. To use color variants use the <span class="txt-teal">.btn-x</span> class or the <span class="txt-teal">.btn-outlined-x</span> class, where x is the name of the color. You can also disable a button by adding the <span class="txt-teal">.disabled</span> class.</p>
       <div class="display-f buttons" style="flex-wrap: wrap;gap:10px;">
         <button class="btn">default btn</button>
         <button class="btn-teal">click me</button>
@@ -225,6 +227,7 @@
       <p class="mt-2 font-sm link" onclick="toggle_code('buttons')">show code</p>
       <pre><code class="lang-html target buttons_target"></code></pre>
       <h2 id="windows" class="pt-5 mb-2 font-md mt-3">Windows</h2>
+      <p class="font-sm mt-3 mb-3">To use the window component you need to add the <span class="txt-teal">.window</span> class to a div. The window should have two elements inside:<br/><span class="txt-teal">.title</span> - content of the windows title bar<br/><span class="txt-teal">.body</span> - content of the windows body.<br/><span class="txt-teal">.status-bar</span> (optional) - content of the windows status bar<br/><br/>Use <span class="txt-teal">.minimize</span>, <span class="txt-teal">.maximize</span>, <span class="txt-teal">.close</span>, <span class="txt-teal">.restore</span> and <span class="txt-teal">.help</span> classes to add premade buttons to the title bar.</p>
       <div class="row gap-2 windows">
       <div>
         <div class="window">
@@ -233,7 +236,7 @@
             <button class="restore"></button>
             <button class="minimize"></button>
           </div>
-          <div class="window-body font-sm">
+          <div class="body font-sm">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus molestiae provident magnam eos saepe assumenda voluptatem, officia doloremque impedit sint.</p>
           </div>
         </div>
@@ -244,7 +247,7 @@
             <button class="close"></button>
             <button class="help"></button>
           </div>
-          <div class="window-body font-sm">
+          <div class="body font-sm">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus molestiae provident magnam eos saepe assumenda voluptatem, officia doloremque impedit sint.</p>
           </div>
           <div class="status-bar">
@@ -266,6 +269,8 @@
       <p class="mt-2 font-sm link" onclick="toggle_code('windows')">show code</p>
       <pre><code class="lang-html target windows_target"></code></pre>
       <h2 id="cards" class="pt-5 mb-2 font-md mt-3" style="clear:both">Grid/Cards</h2>
+      <p class="mt-3 mb-3 font-sm">To create a flex container use the <span class="txt-teal">.row</span> class. Inside you can use the <span class="txt-teal">.col-x-y</span> class, where x is the number of cells the element will take (maximum 12), and y is the breakpoints size (xs, sm, md, lg, xl). To add a gap use the <span class="txt-teal">.gap-x</span> class on a container, where x is a number from 0 to 3.</p>
+      <p class="mt-3 mb-3 font-sm">To create a card component add a <span class="txt-teal">.card</span> class to an element. Inside you can use the <span class="txt-teal">.title</span> class to define the cards title.</p>
       <div class="row gap-2 grid">
        <div class="col-12-xs col-5-sm col-3-xl">
         <div class="card">
@@ -297,6 +302,7 @@
       <p class="mt-2 font-sm link" onclick="toggle_code('grid')">show code</p>
       <pre><code class="lang-html target grid_target"></code></pre>
       <h2 id="tables" class="pt-5 mb-3 font-md mt-3">Tables</h2>
+      <p class="font-sm mt-3 mb-3">Table elements are styled on default, so you don't need to add any classes to them. To get hover effects on tables you can use those two classes:<br/><span class="txt-teal">.highlight-row-x</span> - highlights an entire row on hover<br/><span class="txt-teal">.highlight-cell-x</span> - highlights one cell on hover<br/>where x is the name of the color.</p>
       <div class="display-f tables" style="gap: 20px;flex-wrap: wrap;">
         <table class="bs highlight-row-teal-light-3">
           <tr><th>First Name</th><th>Last Name</th><th>E-mail</th></tr>
@@ -318,6 +324,7 @@
       <p class="mt-2 font-sm link" onclick="toggle_code('tables')">show code</p>
       <pre><code class="lang-html target tables_target"></code></pre>
       <h2 id="inputs" class="pt-5 mb-3 font-md mt-3">Inputs</h2>
+      <p class="font-sm mt-3 mb-3">Inputs are styled on default, so you don't have to add any additional classes.</p>
       <div class="inputs">
         <label class="font-sm">First name:</label><input class="ml-1" type="text"><br/><br/>
         <label class="font-sm">Age:</label><input class="ml-1" type="number"><br/><br/>
@@ -332,12 +339,15 @@
           <option>Option2</option>
           <option>Option3</option>
         </select><br/><br/>
+        <p class="font-sm mt-2 mb-2">You can change the thumb of a range input to a square one by adding the <span class="txt-teal">.box-thumb</span> class.</p>
         <label>Range: </label><label>0&nbsp;</label><input type="range"><label>&nbsp;100</label><br/><br/>
+        <label>Range: </label><label>0&nbsp;</label><input class="box-thumb" type="range"><label>&nbsp;100</label><br/><br/><br/>
         <label class="font-sm">Notes:</label><br/><textarea cols="30" rows="10"></textarea>
       </div><br/>
       <p class="mt-2 font-sm link" onclick="toggle_code('inputs')">show code</p>
       <pre><code class="lang-html target inputs_target"></code></pre>
       <h2 id="badges" class="pt-5 mb-3 font-md mt-3">Badges</h2>
+      <p class="font-sm mt-3 mb-3">To use the badge component just add the <span class="txt-teal">.badge</span> class to your element.</p>
       <div class="badges">
         <span class="font-md">Lorem Ipsum Dolor sit amet<span class="ml-1 badge">New</span></span><br/>
         <button style="width: 220px;" class="rounded-xs btn-teal my-2">Notifications! <span class="badge bg-warn-light-3">0</span></button><br/>
@@ -352,6 +362,7 @@
       <p class="mt-2 font-sm link" onclick="toggle_code('badges')">show code</p>
       <pre><code class="lang-html target badges_target"></code></pre>
       <h2 id="alerts" class="pt-5 mb-3 font-md mt-3">Alerts</h2>
+      <p class="font-sm mt-3 mb-3">To create alerts apply the <span class="txt-teal">.alert</span> class to an element. You can use colored versions by using the <span class="txt-teal">.alert-x</span> class, where x is the name of the color.</p>
       <div class="alerts">
         <div class="alert">Default alert - Lorem ipsum dolor sit amet.</div>
         <div class="alert-teal mt-1">Teal alert - Lorem ipsum dolor sit amet.</div>
@@ -362,6 +373,7 @@
       <p class="mt-2 font-sm link" onclick="toggle_code('alerts')">show code</p>
       <pre><code class="lang-html target alerts_target"></code></pre>
       <h2 id="toasts" class="pt-5 mb-3 font-md mt-3">Toasts</h2>
+      <p class="font-sm mt-3 mb-3">To create toast notifications add the <span class="txt-teal">.toast</span> class to an element. Inside you should put two elements:<br/><span class="txt-teal">.title</span> - the title bar of the toast<br/><span class="txt-teal">.body</span> - the body of the toast</p>
       <div class="toasts row" style="gap: 14px;">
         <div class="toast">
           <div class="title"><span>&nbsp;<i class="fa fa-bell txt-warn-dark-2 font-xs"></i>&nbsp;Notification - Just now</span><i class="mr-1 fa fa-close txt-error"></i></div>
