@@ -14,12 +14,8 @@ $layout_values: flex-start,flex-end,center,space-between,space-around;
 }
 
 @each $key,$val in $grid-gaps{
-  .gap-#{$key} > *{
-    padding: $val;
-  }
   .gap-#{$key}{
-    margin-left: -$val;
-    margin-right: -$val;
+    gap: $val;
   }
 }
 

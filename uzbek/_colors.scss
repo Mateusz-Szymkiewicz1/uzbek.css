@@ -20,7 +20,7 @@
       background: $val;
       color: color-contrast($val);
     }
-  @for $i from 1 through 4{
+  @for $i from 1 through 8{
     @if($val != black and $val != white){
       .txt-#{$key}-dark-#{$i}{
         color: mix(black,$val,$i*10%) !important;

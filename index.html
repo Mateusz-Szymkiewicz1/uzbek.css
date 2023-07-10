@@ -7,19 +7,84 @@
   <title>Uzbek.css</title>
   <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="css/index.css">
+   <link href="https://unpkg.com/prismjs@v1.x/themes/prism-twilight.css" rel="stylesheet" />
+   <script src="https://unpkg.com/prismjs@v1.x/components/prism-core.min.js"></script>
+	<script src="https://unpkg.com/prismjs@v1.x/plugins/autoloader/prism-autoloader.min.js"></script>
+	<style>
+      .right{
+        width: auto;
+        text-align: right;
+      }
+      .menu{
+        display: none;
+      }
+      @media(max-width: 1360px){
+        .right{
+          display: block;
+          float: none;
+          clear: both;
+          margin-left: 50px;
+        }
+      }
+      @media(max-width: 1100px){
+        .top_right{
+          display: none;
+        }
+        .menu{
+          display: block;
+        }
+      }
+      @media(max-width: 860px){
+        .left{
+          padding-left: 30px;
+        }
+        .right{
+          margin-left: 30px;
+        }
+      }
+      @media(max-width: 650px){
+        .top p{
+          display: none;
+        }
+        .menu{
+          margin-top: 25px !important;
+        }
+      }
+	</style>
 </head>
 <body>
   <div class="top bs pb-1">
-    <div class="row justify-space-between">
-      <h1 class="font-xl ml-1 txt-teal" style="margin-top: 5px;"><img class="mr-1" src="favicon.ico" alt="logo" style="height: 40px; width: 40px;">Uzbek.css</h1>
-      <span class="right mr-2 font-md" style="margin-top: 33px;">
-        <a href="https://github.com/Mateusz-Szymkiewicz1/uzbek.css" target="_blank" class="mr-1"><i class="fa fa-github mr-1 txt-teal"></i></a>
-        <a href="#" class="mr-1"><i class="fa fa-play mr-1 txt-teal"></i><span>Examples</span></a>
-        <a href="documentation.html"><i class="fa fa-book mr-1 txt-teal"></i><span>Docs</span></a>
+    <div class="row pl-1 justify-space-between">
+      <h1 class="font-xl font-weight-100 ml-1 txt-teal" style="margin-top: 5px;"><img class="mr-1" src="favicon.ico" alt="logo" style="height: 40px; width: 40px;">Uzbek.css</h1>
+      <span class="top_right mr-2 font-md" style="margin-top: 33px;">
+        <a href="https://github.com/Mateusz-Szymkiewicz1/uzbek.css" target="_blank"><i class="fa fa-github mr-1 txt-teal"></i></a>
+        <span class="txt-silver-dark-3">|</span>
+        <a href="#" class="p-1 bg-hover-teal-light-8"><i class="fa fa-play mr-1 txt-teal"></i><span>Examples</span></a>
+        <a href="documentation.html" class="p-1 bg-hover-teal-light-8"><i class="fa fa-book mr-1 txt-teal"></i><span>Docs</span></a>
+        <span class="txt-silver-dark-3">|</span>
         <i class="fa fa-sun mr-1 ml-1 link" style="color:#f1c40f;"></i>
       </span>
+      <i class="menu mr-2 font-md fa fa-bars link txt-teal" style="margin-top: 33px;"></i>
     </div>
-    <p class="font-sm ml-1">the lightweight css library straight from central asia.</p>
+    <p class="font-sm ml-2">the lightweight css library straight from central asia.</p>
+  </div>
+  <div class="left float-l pl-3">
+    <h2 class="font-xl font-weight-100 mt-4">Uzbek.css - save&nbsp;your&nbsp;time<br/> writing boilerplate CSS.<br/></h2>
+    <span class="font-sm display-b mt-1">Access several utility classes and premade components directly in your HTML,<br/>and build your website with no stress about CSS, with just one quick download.</span>
+    <a href="documentation.html"><button class="btn-teal mt-2 bg-hover-teal-light-1 smooth">Getting started</button></a>
+  </div>
+  <div class="right float-r pt-4 pr-2">
+    <pre><code class="lang-html">&lt;span class=&quot;font-sm display-b txt-navy&quot;&gt;Simple as that!&lt;/span&gt;
+&lt;div class=&quot;row gap-2&quot;&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;title&quot;&gt;Example card&lt;/div&gt;
+    &lt;div class=&quot;body&quot;&gt;Lorem ipsum dolor sit amet.&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;title&quot;&gt;Example card 2&lt;/div&gt;
+    &lt;div class=&quot;body&quot;&gt;Lorem ipsum dolor sit amet.&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
   </div>
 </body>
 </html>
