@@ -8,6 +8,9 @@
   <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
    <link href="https://unpkg.com/prismjs@v1.x/themes/prism-twilight.css" rel="stylesheet" />
    <script src="https://unpkg.com/prismjs@v1.x/components/prism-core.min.js"></script>
 	<script src="https://unpkg.com/prismjs@v1.x/plugins/autoloader/prism-autoloader.min.js"></script>
@@ -63,7 +66,7 @@
     <div class="bg-hover-silver-light-6"><i class="txt-black fa fa-code"></i><br/><br/><span class="font-md">Easy to use</span></div>
     <div class="bg-hover-silver-light-6"><i class="fa-brands fa-square-js" style="color:#e0ca3e;"></i><br/><br/><span class="font-md">JS-free</span></div>
   </div>
-  <h2 class="font-lg font-weight-100 ml-3">Quick start</h2>
+  <h2 class="font-lg font-weight-100 ml-3 pt-2">Quick start</h2>
   <p class="font-sm ml-3 mt-1">You can access all of uzbek.css by using only two lines of code! We don't use any javascript, so you can use those lines in whatever framework you use.</p>
   <p class="ml-3 font-sm mt-2 p-1 bg-teal float-l">npm i uzbek.css</p>
   <div class="row clear-both ml-3">
@@ -72,5 +75,41 @@
     <p class="font-sm mt-2 p-1 bg-teal">@import '~uzbek.css/css/uzbek.css'</p>
   </div>
   <p class="font-sm ml-3 pt-3">You can also download the source code yourself from <a class="txt-teal" target="_blank" href="https://github.com/Mateusz-Szymkiewicz1/uzbek.css">Github!</a></p>
+  <hr class="my-3 o-0">
+  <div class="mt-5 py-3 bg-teal-light-8">
+    <h2 class="font-lg font-weight-100 ml-3">Customizable</h2>
+    <p class="font-sm ml-3 mt-1">Set the variables to match your websites style!</p>
+    <span class="font-sm ml-3 display-b mt-3" style="color:#cc6699;">_variables.scss</span>
+    <div class="code ml-3 row">
+    <pre style="width: fit-content; max-width: 85%;"><code class="lang-sass">@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+$font: 'Poppins';
+
+$colors: (
+  "primary": #2ecc71,
+  "teal": #018281,
+  "error": #d63031,
+  "navy": #010081,
+  "warn": #dfe300
+);
+
+// spacing
+$base-padding: 0.5rem;
+$base-margin: 0.5rem;
+</code></pre>
+  <div class="ml-2">
+    <div>
+      <span class="font-md">Hello World!</span><br/>
+      <button class="btn-teal mt-1">Click me</button>
+    </div>
+    <i class="display-b fa fa-arrow-down font-md ml-4 mt-2 mb-2"></i>
+    <i class="display-n fa fa-arrow-right font-md ml-2 mr-2"></i>
+    <div class="after">
+      <span class="font-sm" style="font-family: 'Poppins';">Hello World!</span><br/>
+      <button class="btn-teal" style="background: #2ecc71;">Click me</button>
+    </div>
+  </div>
+ </div>
+  </div>
 </body>
 </html>
