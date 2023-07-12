@@ -1,6 +1,6 @@
 {
   "name": "uzbek.css",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Simple, lightweight css library straight from central asia.",
   "main": "css/uzbek.css",
   "scripts": {
@@ -11,5 +11,11 @@
   "files": [
     "css/uzbek.css",
     "uzbek/*"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mateusz-Szymkiewicz1/uzbek.css.git"
+  },
+  "homepage": "https://mateusz-szymkiewicz1.github.io/uzbek.css",
+  "keywords": ["css", "library", "uzbek", "modern", "flexbox", "grid", "responsive", "windows", "retro", "tailwind", "bulma", "bootstrap", "classes", "utility", "components", "easy", "lightweight", "html", "mobile", "sass", "scss"]
 }
