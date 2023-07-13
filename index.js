@@ -28,35 +28,50 @@ if(localStorage.getItem('uzbek_theme')){
   }
 }
 
-document.querySelector(".theme_icon").addEventListener('click', function (e) {
-  if (e.target.classList.contains('fa-sun')) {
-    localStorage.setItem('uzbek_theme', 'dark');
-    e.target.classList.add('fa-moon');
-    e.target.style.color = '#ffeaa7';
-    e.target.classList.remove('fa-sun');
+function switch_theme(el){
+  if (el.classList.contains('fa-sun')) {
+    if(localStorage.getItem('uzbek_cookies')){
+      localStorage.setItem('uzbek_theme', 'dark');
+    }
+    el.classList.add('fa-moon');
+    el.style.color = '#ffeaa7';
+    el.classList.remove('fa-sun');
     document.body.classList.add('dark');
   } else {
-    e.target.classList.add('fa-sun');
-    localStorage.setItem('uzbek_theme', 'light');
-    e.target.classList.remove('fa-moon');
-    e.target.style.color = '#f1c40f';
+    if(localStorage.getItem('uzbek_cookies')){
+      localStorage.setItem('uzbek_theme', 'light');
+    }
+    el.classList.add('fa-sun');
+    el.classList.remove('fa-moon');
+    el.style.color = '#f1c40f';
     document.body.classList.remove('dark');
   }
+}
+
+document.querySelector(".theme_icon").addEventListener('click', function (e) {
+  switch_theme(e.target);
 })
 
 document.querySelector(".theme_li").addEventListener('click', function (e) {
-  const icon = document.querySelector(".theme_li").querySelector('.fa');
-  if (icon.classList.contains('fa-sun')) {
-    icon.classList.add('fa-moon');
-    localStorage.setItem('uzbek_theme', 'dark');
-    icon.style.color = '#ffeaa7';
-    icon.classList.remove('fa-sun');
-    document.body.classList.add('dark');
-  } else {
-    icon.classList.add('fa-sun');
-    localStorage.setItem('uzbek_theme', 'light');
-    icon.classList.remove('fa-moon');
-    icon.style.color = '#f1c40f';
-    document.body.classList.remove('dark');
-  }
+  switch_theme(document.querySelector(".theme_li").querySelector('.fa'));
 })
+
+function responsivity(x) {
+    if (x.matches && document.querySelector('.menu')){
+        document.querySelector('.menu').style.display = 'none';
+    }
+}
+var x = window.matchMedia("(min-width: 1100px)");
+responsivity(x);
+x.addListener(responsivity);
+
+if(!localStorage.getItem('uzbek_cookies')){
+  document.querySelector('.cookies').style.display = 'block';
+  document.querySelector('.cookies_ok').addEventListener('click', function(){
+    localStorage.setItem('uzbek_cookies', 'agreed');
+    document.querySelector('.cookies').remove();
+  })
+  document.querySelector('.cookies_stop').addEventListener('click', function(){
+    document.querySelector('.cookies').remove();
+  })
+}

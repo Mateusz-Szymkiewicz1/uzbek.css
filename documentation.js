@@ -5,6 +5,10 @@ if(localStorage.getItem('uzbek_theme')){
   }
 }
 
+setTimeout(function(){
+  document.querySelector('body').style.transition = '.4s';
+},200)
+
 function preCode(selector) {
   const els = Array.prototype.slice.call(document.querySelectorAll(selector), 0);
   els.forEach(function(el) {
