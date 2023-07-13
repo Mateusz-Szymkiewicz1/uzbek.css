@@ -60,9 +60,20 @@
         text-align:center;
         padding-top: 30px;
       }
+      .cookies{
+        bottom: 20px;
+        right: 20px;
+        z-index: 100;
+      }
+      .cookies .btn{
+        text-align: center;
+        padding-top: 10px;
+        height: 35px;
+      }
     </style>
 </head>
 <body>
+   <div style="display:none;" class="alert-teal fixed cookies pr-2 bs">This website uses cookies!<br/><div class="btn mr-1 mt-1 float-l cookies_ok">OK</div> <div class="btn float-l mt-1 cookies_stop">Stop, please!</div></div>
     <div class="navbar txt-white fixed">
         <div class="container">
             <div class="title"><a class="display-f" href="index.html"><img class="mr-1" src="favicon.ico" style="height:40px;width:40px;margin-top:4px;">Uzbek.css</a></div>
@@ -100,11 +111,11 @@
     </div>
     <div class="container pt-5 main">
       <h2 id="start" class="font-md mb-2 mt-3">Getting started</h2>
-       <h3 class="font-sm mt-3 mb-1">With NPM</h3>
+       <h3 class="font-md mt-3 mb-1 font-weight-100">With NPM</h3>
        <p class="font-sm">To use the library just install the package with the "<span class="txt-teal">npm install uzbek.css</span>" command. You should be able to use the package with the "<span class="txt-teal">import 'uzbek.css/css/uzbek.css'</span>" line in your js code, or import it into your css file with "<span class="txt-teal">@import '~uzbek.css/css/uzbek.css'</span>". If you want to modify the source code or purge unused css, you will need to install other packages, such as <span class="txt-teal">sass</span> or <span class="txt-teal">gulp</span>.</p>
-       <h3 class="font-sm mt-3 mb-1">With CDN</h3>
+       <h3 class="font-md mt-3 mb-1 font-weight-100">With CDN</h3>
        <p class="font-sm">Unfortunately, this library is not available to get using a cdn. If you want to help us - follow and star our <a class="txt-teal" target="_blank" href="https://github.com/Mateusz-Szymkiewicz1/uzbek.css">Github repository</a>.</p>
-       <h3 class="font-sm mt-3 mb-1">Download</h3>
+       <h3 class="font-md mt-3 mb-1 font-weight-100">Download</h3>
        <p class="font-sm">You can download our source code from the <a class="txt-teal" target="_blank" href="https://github.com/Mateusz-Szymkiewicz1/uzbek.css">Github repository</a>. Your'e looking for the main uzbek.css file and .scss files.</p>
       <br/><br/>
       <h2 id="colors" class="font-md mb-2 pt-5 mt-1">Colors</h2>

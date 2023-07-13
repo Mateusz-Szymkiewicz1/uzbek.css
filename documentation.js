@@ -33,11 +33,15 @@ function preCode(selector) {
 
 document.querySelector(".navbar i").addEventListener('click', function(e){
   if(e.target.className == 'fa fa-sun'){
-    localStorage.setItem('uzbek_theme', 'dark');
+    if(localStorage.getItem('uzbek_cookies')){
+      localStorage.setItem('uzbek_theme', 'dark');
+    }
     e.target.className = 'fa fa-moon';
     document.body.classList.add('dark');
   }else{
-    localStorage.setItem('uzbek_theme', 'light');
+    if(localStorage.getItem('uzbek_cookies')){
+      localStorage.setItem('uzbek_theme', 'light');
+    }
     e.target.className = 'fa fa-sun';
     document.body.classList.remove('dark');
   }
@@ -56,4 +60,15 @@ function toggle_code(code){
     preCode(`.${code}_target`);
     Prism.highlightElement(document.querySelector(`.${code}_target`));
   }
+}
+
+if(!localStorage.getItem('uzbek_cookies')){
+  document.querySelector('.cookies').style.display = 'block';
+  document.querySelector('.cookies_ok').addEventListener('click', function(){
+    localStorage.setItem('uzbek_cookies', 'agreed');
+    document.querySelector('.cookies').remove();
+  })
+  document.querySelector('.cookies_stop').addEventListener('click', function(){
+    document.querySelector('.cookies').remove();
+  })
 }
