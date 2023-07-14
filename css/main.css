@@ -75,6 +75,10 @@
   .right {
     margin-left: 30px;
   }
+  
+  .ml-3{
+    margin-left: 30px;
+  }
 }
 
 @media(max-width: 840px) {
@@ -149,7 +153,12 @@
 }
 
 .dark .toast{
-  border: 1px solid #fff;
+  border: 1px solid #777;
+}
+
+.dark .toast .body{
+  background: #303030 !important;
+  color: #fff !important;
 }
 
 .dark .footer .txt-navy{

@@ -96,7 +96,7 @@ $rounded-values: (
 );
 
 .rounded{
-  border-radius: 50%;
+  border-radius: 50% !important;
 }
 
 @each $key,$val in $rounded-values{
