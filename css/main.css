@@ -116,7 +116,7 @@
   color: #129392 !important;
 }
 
-.dark .top .bg-hover-teal-light-8:hover{
+.dark .top .bg-hover-primary-light-8:hover{
   background: #303030 !important;
   color: #fff !important;
 }
@@ -147,7 +147,7 @@
   color: #fff !important;
 }
 
-.dark .custom .bg-teal-light-7{
+.dark .custom .bg-primary-light-7{
   background: #404040 !important;
   color: #fff !important;
 }
@@ -161,6 +161,6 @@
   color: #fff !important;
 }
 
-.dark .footer .txt-navy{
+.dark .footer .txt-secondary{
   color: #969eff !important;
 }

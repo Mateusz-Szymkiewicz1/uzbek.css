@@ -112,7 +112,6 @@ $utilities: (
       "5": $base-margin * 8
     ),
   ),
-
   "opacity": (
     "prefix": "o",
     "values": (
@@ -234,4 +233,60 @@ $utilities: (
 
 .clear-both{
   clear: both;
+}
+
+.b-0{
+  border: 0;
+}
+
+.b-t-0{
+  border-top: 0;
+}
+
+.b-r-0{
+  border-right: 0;
+}
+
+.b-b-0{
+  border-bottom: 0;
+}
+
+.b-l-0{
+  border-left: 0;
+}
+
+@each $key,$val in $colors{
+  .b-#{$key}{
+    border: 1px solid $val;
+  }
+  .b-t-#{$key}{
+    border-top: 1px solid $val;
+  }
+   .b-r-#{$key}{
+    border-right: 1px solid $val;
+  }
+   .b-b-#{$key}{
+    border-bottom: 1px solid $val;
+  }
+   .b-l-#{$key}{
+    border-left: 1px solid $val;
+  }
+}
+
+@for $i from 1 through 20{
+  .b-w-#{$i}{
+    border-width: $i * 1px;
+  }
+}
+
+.b-s-solid{
+  border-style: solid;
+}
+
+.b-s-dotted{
+  border-style: dotted;
+}
+
+.b-s-dashed{
+  border-style: dashed;
 }

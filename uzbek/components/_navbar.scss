@@ -1,4 +1,4 @@
-@mixin navbar($bg: map-get($colors,"teal") ){
+@mixin navbar($bg: map-get($colors,"primary") ){
     width: 100%;
     height: 70px;
     display: flex;
@@ -7,6 +7,7 @@
     font-size: $font-size-sm;
     box-shadow: $base-box-shadow;
     z-index: 100;
+    color: color-contrast($bg);
   
     .title{
         font-size: $font-size-lg;

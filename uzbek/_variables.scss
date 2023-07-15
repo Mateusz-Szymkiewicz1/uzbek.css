@@ -6,13 +6,13 @@ $base-box-shadow: 2px 6px 10px rgba(0,0,0,0.2);
 $window-box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
 
 $colors: (
-  "teal": #018281,
+  "primary": #018281,
+  "secondary": #010081,
+  "error": #d63031,
+  "warn": #dfe300,
   "silver": silver,
   "white": white,
-  "black": black,
-  "error": #d63031,
-  "navy": #010081,
-  "warn": #dfe300
+  "black": black
 );
 
 // spacing

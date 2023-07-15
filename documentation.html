@@ -38,7 +38,7 @@
         width: auto;
       }
       .side{
-        border-right: 2px solid teal;
+        border-right: 2px solid primary;
         position: fixed;
         top: 70px;
         left: 0;
@@ -73,14 +73,14 @@
     </style>
 </head>
 <body>
-   <div style="display:none;" class="alert-teal fixed cookies pr-2 bs">This website uses cookies!<br/><div class="btn mr-1 mt-1 float-l cookies_ok">OK</div> <div class="btn float-l mt-1 cookies_stop">Stop, please!</div></div>
+   <div style="display:none;" class="alert-primary fixed cookies pr-2 bs">This website uses cookies!<br/><div class="btn mr-1 mt-1 float-l cookies_ok">OK</div> <div class="btn float-l mt-1 cookies_stop">Stop, please!</div></div>
     <div class="navbar txt-white fixed">
         <div class="container">
             <div class="title"><a class="display-f" href="index.html"><img class="mr-1" src="favicon.ico" style="height:40px;width:40px;margin-top:4px;">Uzbek.css</a></div>
             <span><span>Lightweight css library straight from central asia.&nbsp;&nbsp;</span><i class="fa fa-sun"></i></span>
         </div>
     </div>
-    <div class="side bg-teal pt-2 txt-white pl-1">
+    <div class="side bg-primary pt-2 txt-white pl-1">
       <ul>
         <li><a href="#">Getting started</a></li><br/>
         <li><a href="#customizing">Customizing</a></li><br/>
@@ -90,6 +90,7 @@
             <li class="ml-1 light"><a href="#fonts">Font sizes</a></li>
             <li class="ml-1 light"><a href="#margins">Margins/Paddings</a></li>
             <li class="ml-1 light"><a href="#opacity">Opacity</a></li>
+            <li class="ml-1 light"><a href="#borders">Borders</a></li>
             <li class="ml-1 light"><a href="#border_radius">Border radius</a></li>
             <li class="ml-1 light"><a href="#display">Display</a></li>
             <li class="ml-1 light"><a href="#other">Other</a></li>
@@ -113,51 +114,51 @@
     <div class="container pt-5 main">
       <h2 id="start" class="font-md mb-2 mt-3">Getting started</h2>
        <h3 class="font-md mt-3 mb-1 font-weight-100">With NPM</h3>
-       <p class="font-sm">To use the library just install the package with the "<span class="txt-teal">npm install uzbek.css</span>" command. You should be able to use the package with the "<span class="txt-teal">import 'uzbek.css/css/uzbek.css'</span>" line in your js code, or import it into your css file with "<span class="txt-teal">@import '~uzbek.css/css/uzbek.css'</span>". If you want to modify the source code or purge unused css, you will need to install other packages, such as <span class="txt-teal">sass</span> or <span class="txt-teal">gulp</span>.</p>
+       <p class="font-sm">To use the library just install the package with the "<span class="txt-primary">npm install uzbek.css</span>" command. You should be able to use the package with the "<span class="txt-primary">import 'uzbek.css/css/uzbek.css'</span>" line in your js code, or import it into your css file with "<span class="txt-primary">@import '~uzbek.css/css/uzbek.css'</span>". If you want to modify the source code or purge unused css, you will need to install other packages, such as <span class="txt-primary">sass</span> or <span class="txt-primary">gulp</span>.</p>
        <h3 class="font-md mt-3 mb-1 font-weight-100">With CDN</h3>
-       <p class="font-sm">Unfortunately, this library is not available to get using a cdn. If you want to help us - follow and star our <a class="txt-teal" target="_blank" href="https://github.com/Mateusz-Szymkiewicz1/uzbek.css">Github repository</a>.</p>
+       <p class="font-sm">Unfortunately, this library is not available to get using a cdn. If you want to help us - follow and star our <a class="txt-primary" target="_blank" href="https://github.com/Mateusz-Szymkiewicz1/uzbek.css">Github repository</a>.</p>
        <h3 class="font-md mt-3 mb-1 font-weight-100">Download</h3>
-       <p class="font-sm">You can download our source code from the <a class="txt-teal" target="_blank" href="https://github.com/Mateusz-Szymkiewicz1/uzbek.css">Github repository</a>. Your'e looking for the main uzbek.css file and .scss files.</p>
+       <p class="font-sm">You can download our source code from the <a class="txt-primary" target="_blank" href="https://github.com/Mateusz-Szymkiewicz1/uzbek.css">Github repository</a>. Your'e looking for the main uzbek.css file and .scss files.</p>
       <br/><br/>
       <h2 id="customizing" class="font-md mb-2 mt-2 pt-5">Customizing</h2>
-       <p class="font-sm mb-3 mt-3">To customize the library, you need to open the <span class="txt-teal">_variables.scss</span> file and change the value of the variables, or add some more, to make your website unique. You will need to use <span class="txt-teal">sass</span>.</p>
+       <p class="font-sm mb-3 mt-3">To customize the library, you need to open the <span class="txt-primary">_variables.scss</span> file and change the value of the variables, or add some more, to make your website unique. You will need to use <span class="txt-primary">sass</span>.</p>
       <h2 id="colors" class="font-md mb-2 pt-5 mt-1">Colors</h2>
-      <p class="font-sm mb-3 mt-3">Uzbek.css provides custom colors such as <span class='txt-teal'>teal</span> or <span class="txt-error">error</span>. You can use those predefined ones or add your own colors by adding them to the <span class="txt-teal">$colors</span> map in <span class="txt-teal">variables.scss</span> file. For every color, you can use automatically generated classes <span class="txt-teal">light</span> and <span class="txt-teal">dark</span> with values from 1 to 8. You can use the color names in classes such as <span class="txt-teal">.bg-x</span> or <span class="txt-teal">.txt-x</span> and in hover classes - <span class="txt-teal">.bg-hover-x</span> and <span class="txt-teal">.txt-hover-x</span>.</p>
+      <p class="font-sm mb-3 mt-3">Uzbek.css provides custom colors such as <span class='txt-primary'>primary</span> or <span class="txt-error">error</span>. You can use those predefined ones or add your own colors by adding them to the <span class="txt-primary">$colors</span> map in <span class="txt-primary">variables.scss</span> file. For every color, you can use automatically generated classes <span class="txt-primary">light</span> and <span class="txt-primary">dark</span> with values from 1 to 8. You can use the color names in classes such as <span class="txt-primary">.bg-x</span> or <span class="txt-primary">.txt-x</span> and in hover classes - <span class="txt-primary">.bg-hover-x</span> and <span class="txt-primary">.txt-hover-x</span>.</p>
       <div class="colors">
-        <span class="txt-teal font-sm">teal text</span><span>|</span>
+        <span class="txt-primary font-sm">primary text</span><span>|</span>
         <span class="txt-silver font-sm">silver text</span><span>|</span>
         <span class="txt-error font-sm">error text</span><span>|</span>
         <span class="txt-warn font-sm">warn text</span><span>|</span>
-        <span class="txt-navy font-sm">navy text</span>
+        <span class="txt-secondary font-sm">secondary text</span>
         <br/><br/>
-        <span class="bg-teal font-sm">teal bg</span><span>|</span>
+        <span class="bg-primary font-sm">primary bg</span><span>|</span>
         <span class="bg-silver font-sm">silver bg</span><span>|</span>
         <span class="bg-error font-sm">error bg</span><span>|</span>
         <span class="bg-warn font-sm">warn bg</span><span>|</span>
-        <span class="bg-navy font-sm">navy bg</span>
+        <span class="bg-secondary font-sm">secondary bg</span>
         <br/><br/>
         <div class="display-f" style="flex-wrap: wrap; gap: 10px;">
-          <span class="bg-teal-dark-4 font-sm">teal-dark-4</span><span>|</span>
-          <span class="bg-teal-dark-3 font-sm">teal-dark-3</span><span>|</span>
-          <span class="bg-teal-dark-2 font-sm">teal-dark-2</span><span>|</span>
-          <span class="bg-teal-dark-1 font-sm">teal-dark-1</span><span>|</span>
-          <span class="bg-teal font-sm">teal</span><span>|</span>
-          <span class="bg-teal-light-1 font-sm">teal-light-1</span><span>|</span>
-          <span class="bg-teal-light-2 font-sm">teal-light-2</span><span>|</span>
-          <span class="bg-teal-light-3 font-sm">teal-light-3</span><span>|</span>
-          <span class="bg-teal-light-4 font-sm">teal-light-4</span>
+          <span class="bg-primary-dark-4 font-sm">primary-dark-4</span><span>|</span>
+          <span class="bg-primary-dark-3 font-sm">primary-dark-3</span><span>|</span>
+          <span class="bg-primary-dark-2 font-sm">primary-dark-2</span><span>|</span>
+          <span class="bg-primary-dark-1 font-sm">primary-dark-1</span><span>|</span>
+          <span class="bg-primary font-sm">primary</span><span>|</span>
+          <span class="bg-primary-light-1 font-sm">primary-light-1</span><span>|</span>
+          <span class="bg-primary-light-2 font-sm">primary-light-2</span><span>|</span>
+          <span class="bg-primary-light-3 font-sm">primary-light-3</span><span>|</span>
+          <span class="bg-primary-light-4 font-sm">primary-light-4</span>
         </div>
         <br/>
         <span class="txt-silver txt-hover-silver-dark-2 font-sm link">hover me</span><span>|</span>
-        <span class="txt-teal txt-hover-error smooth font-sm link">hover me</span><span>|</span>
+        <span class="txt-primary txt-hover-error smooth font-sm link">hover me</span><span>|</span>
         <span class="bg-warn bg-hover-warn-dark-2 font-sm link">hover me</span><span>|</span>
-        <span class="bg-error bg-hover-navy smooth font-sm link">hover me</span><span>|</span>
-        <span class="bg-teal bg-hover-teal-light-4 smooth font-sm link">hover me</span>
+        <span class="bg-error bg-hover-secondary smooth font-sm link">hover me</span><span>|</span>
+        <span class="bg-primary bg-hover-primary-light-4 smooth font-sm link">hover me</span>
       </div><br/>
       <p class="mt-2 font-sm link" onclick="toggle_code('colors')">show code</p>
       <pre><code class="lang-html target colors_target"></code></pre>
       <h2 id="fonts" class="pt-5 mb-3 font-md mt-3">Font sizes</h2>
-      <p class="font-sm mt-3 mb-3">To define font sizes use the <span class="txt-teal">.font-x</span> class where x could be: xs, sm, md, lg, xl and xxl. To change font weight use the <span class="txt-teal">.font-weight-x</span> class, where x is the font weight value (from 100 to 800).</p>
+      <p class="font-sm mt-3 mb-3">To define font sizes use the <span class="txt-primary">.font-x</span> class where x could be: xs, sm, md, lg, xl and xxl. To change font weight use the <span class="txt-primary">.font-weight-x</span> class, where x is the font weight value (from 100 to 800).</p>
       <div class="fonts">
         <span class="font-xs">this is extra small font</span><br/>
         <span class="font-sm">this is small font</span><br/>
@@ -169,82 +170,91 @@
       <pre><code class="lang-html target fonts_target"></code></pre>
       <h2 id="margins" class="pt-5 mb-2 font-md mt-3">Margins/Paddings</h2>
       <p class="font-sm mt-3 mb-3">To define margins in your html you can use classes:<br/>
-        <span class="txt-teal">.m-x</span> ( margin )<br/>
-        <span class="txt-teal">.mt-x</span> ( margin-top )<br/>
-        <span class="txt-teal">.mr-x</span> ( margin-right )<br/>
-        <span class="txt-teal">.mb-x</span> ( margin-bottom )<br/>
-        <span class="txt-teal">.ml-x</span> ( margin-left )<br/>
-        <span class="txt-teal">.my-x</span> ( vertical margin )<br/>
-        <span class="txt-teal">.mx-x</span> ( horizontal margin )<br/><br/>
+        <span class="txt-primary">.m-x</span> ( margin )<br/>
+        <span class="txt-primary">.mt-x</span> ( margin-top )<br/>
+        <span class="txt-primary">.mr-x</span> ( margin-right )<br/>
+        <span class="txt-primary">.mb-x</span> ( margin-bottom )<br/>
+        <span class="txt-primary">.ml-x</span> ( margin-left )<br/>
+        <span class="txt-primary">.my-x</span> ( vertical margin )<br/>
+        <span class="txt-primary">.mx-x</span> ( horizontal margin )<br/><br/>
         Same with paddings!<br/>
-        <span class="txt-teal">.p-x</span> ( padding )<br/>
-        <span class="txt-teal">.pt-x</span> ( padding-top )<br/>
-        <span class="txt-teal">.pr-x</span> ( padding-right )<br/>
-        <span class="txt-teal">.pb-x</span> ( padding-bottom )<br/>
-        <span class="txt-teal">.pl-x</span> ( padding-left )<br/>
-        <span class="txt-teal">.py-x</span> ( vertical padding )<br/>
-        <span class="txt-teal">.px-x</span> ( horizontal padding )<br/><br/>
+        <span class="txt-primary">.p-x</span> ( padding )<br/>
+        <span class="txt-primary">.pt-x</span> ( padding-top )<br/>
+        <span class="txt-primary">.pr-x</span> ( padding-right )<br/>
+        <span class="txt-primary">.pb-x</span> ( padding-bottom )<br/>
+        <span class="txt-primary">.pl-x</span> ( padding-left )<br/>
+        <span class="txt-primary">.py-x</span> ( vertical padding )<br/>
+        <span class="txt-primary">.px-x</span> ( horizontal padding )<br/><br/>
         "x" is a value from 0 to 5 defining the margin/padding size.
       </p>
       <h2 id="opacity" class="pt-5 mb-2 font-md mt-3">Opacity</h2>
-      <p class="font-sm mt-3 mb-3">To change the opacity of an element you can use the <span class="txt-teal">.o-x</span> class where x is an iteration of 10 from 0 to 100.</p>
+      <p class="font-sm mt-3 mb-3">To change the opacity of an element you can use the <span class="txt-primary">.o-x</span> class where x is an iteration of 10 from 0 to 100.</p>
       <div class="opacities row" style="gap: 10px;">
-        <div class="o-100 bg-teal font-md">100</div>
-        <div class="o-90 bg-teal font-md">90</div>
-        <div class="o-80 bg-teal font-md">80</div>
-        <div class="o-60 bg-teal font-md">60</div>
-        <div class="o-40 bg-teal font-md">40</div>
-        <div class="o-20 bg-teal font-md">20</div>
-        <div class="o-0 bg-teal font-md">0</div>
+        <div class="o-100 bg-primary font-md">100</div>
+        <div class="o-90 bg-primary font-md">90</div>
+        <div class="o-80 bg-primary font-md">80</div>
+        <div class="o-60 bg-primary font-md">60</div>
+        <div class="o-40 bg-primary font-md">40</div>
+        <div class="o-20 bg-primary font-md">20</div>
+        <div class="o-0 bg-primary font-md">0</div>
       </div><br/>
       <p class="mt-2 font-sm link" onclick="toggle_code('opacities')">show code</p>
       <pre><code class="lang-html target opacities_target"></code></pre>
+      <h2 id="borders" class="pt-5 mb-2 font-md mt-3">Borders</h2>
+      <p class="font-sm mt-3 mb-3">To add a border to your element you can use such classes as<br/>
+      <span class="txt-primary">.b-x</span> (border)<br/>
+      <span class="txt-primary">.b-r-x</span> (border-right)<br/>
+      <span class="txt-primary">.b-b-x</span> (border-bottom)<br/>
+      <span class="txt-primary">.b-t-x</span> (border-top)<br/>
+      <span class="txt-primary">.b-l-x</span> (border-left)<br/><br/>
+      where x is the color name. To change border width use <span class="txt-primary">.b-w-x</span> class, where x is the amount of pixels, and to change border style use <span class="txt-primary">.b-s-x</span> where x could be solid, dashed or dotted.
+      </p>
       <h2 id="border_radius" class="pt-5 mb-2 font-md mt-3">Border radius</h2>
-      <p class="font-sm mt-3 mb-3">To define border-radius of an element you can use the <span class="txt-teal">.rounded</span> class, that will apply 50% border-radius or <span class="txt-teal">.rounded-x</span> class, where x could be: xs, sm, md, lg or xl.</p>
+      <p class="font-sm mt-3 mb-3">To define border-radius of an element you can use the <span class="txt-primary">.rounded</span> class, that will apply 50% border-radius or <span class="txt-primary">.rounded-x</span> class, where x could be: xs, sm, md, lg or xl.</p>
       <div class="radiuses row" style="gap: 10px;">
-        <div class="bg-teal font-md rounded-xs">xs</div>
-        <div class="bg-teal font-md rounded-sm">sm</div>
-        <div class="bg-teal font-md rounded-md">md</div>
-        <div class="bg-teal font-md rounded-lg">lg</div>
-        <div class="bg-teal font-md rounded-xl">xl</div>
-        <div class="bg-teal font-md rounded"></div>
+        <div class="bg-primary font-md rounded-xs">xs</div>
+        <div class="bg-primary font-md rounded-sm">sm</div>
+        <div class="bg-primary font-md rounded-md">md</div>
+        <div class="bg-primary font-md rounded-lg">lg</div>
+        <div class="bg-primary font-md rounded-xl">xl</div>
+        <div class="bg-primary font-md rounded"></div>
       </div><br/>
       <p class="mt-2 font-sm link" onclick="toggle_code('radiuses')">show code</p>
       <pre><code class="lang-html target radiuses_target"></code></pre>
       <h2 id="display" class="pt-5 mb-2 font-md mt-3">Display</h2>
-      <p class="font-sm mt-3 mb-3">To define the display property of an element use the <span class="txt-teal">.display-x</span> class where x could be:<br/>
-      <span class="txt-teal">n</span> - none<br/>
-      <span class="txt-teal">b</span> - block<br/>
-      <span class="txt-teal">f</span> - flex<br/>
-      <span class="txt-teal">i</span> - inline<br/>
-      <span class="txt-teal">i-b</span> - inline-block<br/>
+      <p class="font-sm mt-3 mb-3">To define the display property of an element use the <span class="txt-primary">.display-x</span> class where x could be:<br/>
+      <span class="txt-primary">n</span> - none<br/>
+      <span class="txt-primary">b</span> - block<br/>
+      <span class="txt-primary">f</span> - flex<br/>
+      <span class="txt-primary">i</span> - inline<br/>
+      <span class="txt-primary">i-b</span> - inline-block<br/>
       </p>
       <h2 id="other" class="pt-5 mb-2 font-md mt-3">Other</h2>
       <p class="font-sm mt-3 mb-3">Some addititonal classes that you can use:<br/>
-      <span class="txt-teal">.bs</span> - applies basic box-shadow<br/>
-      <span class="txt-teal">.fixed</span> - applies position: fixed; property<br/>
-      <span class="txt-teal">.smooth</span> - applies transition property<br/>
-      <span class="txt-teal">.link</span> - applies cursor: pointer; property<br/>
-      <span class="txt-teal">.container</span> - centers a div and its content<br/>
-      <span class="txt-teal">.float-r</span> - applies float: left; property<br/>
-      <span class="txt-teal">.float-l</span> - applies float: right; property<br/>
-      <span class="txt-teal">.clear-both</span> - applies clear: both; property<br/>
+      <span class="txt-primary">.bs</span> - applies basic box-shadow<br/>
+      <span class="txt-primary">.fixed</span> - applies position: fixed; property<br/>
+      <span class="txt-primary">.smooth</span> - applies transition property<br/>
+      <span class="txt-primary">.link</span> - applies cursor: pointer; property<br/>
+      <span class="txt-primary">.container</span> - centers a div and its content<br/>
+      <span class="txt-primary">.float-r</span> - applies float: left; property<br/>
+      <span class="txt-primary">.float-l</span> - applies float: right; property<br/>
+      <span class="txt-primary">.clear-both</span> - applies clear: both; property<br/>
       </p>
       <h2 id="buttons" class="pt-5 mb-2 font-md mt-3">Buttons</h2>
-      <p class="font-sm mt-3 mb-3">You can use a predefined button component by adding the <span class="txt-teal">.btn</span> class to an element. To use color variants use the <span class="txt-teal">.btn-x</span> class or the <span class="txt-teal">.btn-outlined-x</span> class, where x is the name of the color. You can also disable a button by adding the <span class="txt-teal">.disabled</span> class.</p>
+      <p class="font-sm mt-3 mb-3">You can use a predefined button component by adding the <span class="txt-primary">.btn</span> class to an element. To use color variants use the <span class="txt-primary">.btn-x</span> class or the <span class="txt-primary">.btn-outlined-x</span> class, where x is the name of the color. You can also disable a button by adding the <span class="txt-primary">.disabled</span> class.</p>
       <div class="display-f buttons" style="flex-wrap: wrap;gap:10px;">
         <button class="btn">default btn</button>
-        <button class="btn-teal">click me</button>
+        <button class="btn-primary">click me</button>
         <button class="btn-error bs bg-hover-error-dark-2 smooth">click me</button>
         <button class="btn-warn bg-hover-silver">click me</button>
-        <button class="btn-navy disabled">click me</button>
-        <button class="btn-teal-outlined bs">click me</button>
+        <button class="btn-secondary disabled">click me</button>
+        <button class="btn-primary-outlined bs">click me</button>
         <button class="btn-error-outlined bg-hover-error smooth txt-hover-white">click me</button>
       </div><br/>
       <p class="mt-2 font-sm link" onclick="toggle_code('buttons')">show code</p>
       <pre><code class="lang-html target buttons_target"></code></pre>
       <h2 id="windows" class="pt-5 mb-2 font-md mt-3">Windows</h2>
-      <p class="font-sm mt-3 mb-3">To use the window component you need to add the <span class="txt-teal">.window</span> class to a div. The window should have two elements inside:<br/><span class="txt-teal">.title</span> - content of the windows title bar<br/><span class="txt-teal">.body</span> - content of the windows body.<br/><span class="txt-teal">.status-bar</span> (optional) - content of the windows status bar<br/><br/>Use <span class="txt-teal">.minimize</span>, <span class="txt-teal">.maximize</span>, <span class="txt-teal">.close</span>, <span class="txt-teal">.restore</span> and <span class="txt-teal">.help</span> classes to add premade buttons to the title bar.</p>
+      <p class="font-sm mt-3 mb-3">To use the window component you need to add the <span class="txt-primary">.window</span> class to a div. The window should have two elements inside:<br/><span class="txt-primary">.title</span> - content of the windows title bar<br/><span class="txt-primary">.body</span> - content of the windows body.<br/><span class="txt-primary">.status-bar</span> (optional) - content of the windows status bar<br/><br/>Use <span class="txt-primary">.minimize</span>, <span class="txt-primary">.maximize</span>, <span class="txt-primary">.close</span>, <span class="txt-primary">.restore</span> and <span class="txt-primary">.help</span> classes to add premade buttons to the title bar.</p>
       <div class="row gap-2 windows">
       <div>
         <div class="window">
@@ -286,8 +296,8 @@
       <p class="mt-2 font-sm link" onclick="toggle_code('windows')">show code</p>
       <pre><code class="lang-html target windows_target"></code></pre>
       <h2 id="cards" class="pt-5 mb-2 font-md mt-3" style="clear:both">Grid/Cards</h2>
-      <p class="mt-3 mb-3 font-sm">To create a flex container use the <span class="txt-teal">.row</span> class. Inside you can use the <span class="txt-teal">.col-x-y</span> class, where x is the number of cells the element will take (maximum 12), and y is the breakpoints size (xs, sm, md, lg, xl). To add a gap use the <span class="txt-teal">.gap-x</span> class on a container, where x is a number from 0 to 3.</p>
-      <p class="mt-3 mb-3 font-sm">To create a card component add a <span class="txt-teal">.card</span> class to an element. Inside you can use the <span class="txt-teal">.title</span> class to define the cards title.</p>
+      <p class="mt-3 mb-3 font-sm">To create a flex container use the <span class="txt-primary">.row</span> class. Inside you can use the <span class="txt-primary">.col-x-y</span> class, where x is the number of cells the element will take (maximum 12), and y is the breakpoints size (xs, sm, md, lg, xl). To add a gap use the <span class="txt-primary">.gap-x</span> class on a container, where x is a number from 0 to 3.</p>
+      <p class="mt-3 mb-3 font-sm">To create a card component add a <span class="txt-primary">.card</span> class to an element. Inside you can use the <span class="txt-primary">.title</span> class to define the cards title.</p>
       <div class="row gap-2 grid">
        <div class="col-12-xs col-5-sm col-3-xl">
         <div class="card">
@@ -316,10 +326,20 @@
       </div><br/>
       <p class="mt-2 font-sm link" onclick="toggle_code('grid')">show code</p>
       <pre><code class="lang-html target grid_target"></code></pre>
+      <h2 id="tables" class="pt-5 mb-3 font-md mt-3">Navbars/Sidebars</h2>
+      <p class="font-sm mt-3 mb-3">You can add a navbar/sidebar to your website by using premade components. Just add the <span class="txt-primary">.navbar</span> or <span class="txt-primary">.sidebar</span> class to your element, and it should style itself!</p>
+      <div class="navbars">
+        <div class="navbar px-1" style="width:fit-content;">
+          <h3 class="mr-5 font-weight-100 font-md">This is a navbar!</h3>
+          <i class="fa fa-bars link ml-2"></i>
+        </div>
+      </div><br/>
+      <p class="mt-2 font-sm link" onclick="toggle_code('navbars')">show code</p>
+      <pre><code class="lang-html target navbars_target"></code></pre>
       <h2 id="tables" class="pt-5 mb-3 font-md mt-3">Tables</h2>
-      <p class="font-sm mt-3 mb-3">Table elements are styled on default, so you don't need to add any classes to them. To get hover effects on tables you can use those two classes:<br/><span class="txt-teal">.highlight-row-x</span> - highlights an entire row on hover<br/><span class="txt-teal">.highlight-cell-x</span> - highlights one cell on hover<br/>where x is the name of the color.</p>
+      <p class="font-sm mt-3 mb-3">Table elements are styled on default, so you don't need to add any classes to them. To get hover effects on tables you can use those two classes:<br/><span class="txt-primary">.highlight-row-x</span> - highlights an entire row on hover<br/><span class="txt-primary">.highlight-cell-x</span> - highlights one cell on hover<br/>where x is the name of the color.</p>
       <div class="display-f tables" style="gap: 20px;flex-wrap: wrap;">
-        <table class="bs highlight-row-teal-light-3">
+        <table class="bs highlight-row-primary-light-3">
           <tr><th>First Name</th><th>Last Name</th><th>E-mail</th></tr>
           <tr><td>Lucas</td><td>Smith</td><td>example@gmail.com</td></tr>
           <tr><td>Marie</td><td>Hammerford</td><td>marie_ford@gmail.com</td></tr>
@@ -354,7 +374,7 @@
           <option>Option2</option>
           <option>Option3</option>
         </select><br/><br/>
-        <p class="font-sm mt-2 mb-2">You can change the thumb of a range input to a square one by adding the <span class="txt-teal">.box-thumb</span> class.</p>
+        <p class="font-sm mt-2 mb-2">You can change the thumb of a range input to a square one by adding the <span class="txt-primary">.box-thumb</span> class.</p>
         <label>Range: </label><label>0&nbsp;</label><input type="range"><label>&nbsp;100</label><br/><br/>
         <label>Range: </label><label>0&nbsp;</label><input class="box-thumb" type="range"><label>&nbsp;100</label><br/><br/><br/>
         <label class="font-sm">Notes:</label><br/><textarea cols="30" rows="10"></textarea>
@@ -362,33 +382,33 @@
       <p class="mt-2 font-sm link" onclick="toggle_code('inputs')">show code</p>
       <pre><code class="lang-html target inputs_target"></code></pre>
       <h2 id="badges" class="pt-5 mb-3 font-md mt-3">Badges</h2>
-      <p class="font-sm mt-3 mb-3">To use the badge component just add the <span class="txt-teal">.badge</span> class to your element.</p>
+      <p class="font-sm mt-3 mb-3">To use the badge component just add the <span class="txt-primary">.badge</span> class to your element.</p>
       <div class="badges">
         <span class="font-md">Lorem Ipsum Dolor sit amet<span class="ml-1 badge">New</span></span><br/>
-        <button style="width: 220px;" class="rounded-xs btn-teal my-2">Notifications! <span class="badge bg-warn-light-3">0</span></button><br/>
+        <button style="width: 220px;" class="rounded-xs btn-primary my-2">Notifications! <span class="badge bg-warn-light-3">0</span></button><br/>
         <div class="display-f" style="gap: 20px;flex-wrap: wrap;">
           <span class="badge font-sm">Example</span>
-          <span class="badge bg-teal font-sm">Example</span>
+          <span class="badge bg-primary font-sm">Example</span>
           <span class="badge bg-error font-sm">Example</span>
           <span class="badge bg-warn font-sm">Example</span>
-          <span class="badge bg-navy font-sm">Example</span>
+          <span class="badge bg-secondary font-sm">Example</span>
         </div>
       </div><br/>
       <p class="mt-2 font-sm link" onclick="toggle_code('badges')">show code</p>
       <pre><code class="lang-html target badges_target"></code></pre>
       <h2 id="alerts" class="pt-5 mb-3 font-md mt-3">Alerts</h2>
-      <p class="font-sm mt-3 mb-3">To create alerts apply the <span class="txt-teal">.alert</span> class to an element. You can use colored versions by using the <span class="txt-teal">.alert-x</span> class, where x is the name of the color.</p>
+      <p class="font-sm mt-3 mb-3">To create alerts apply the <span class="txt-primary">.alert</span> class to an element. You can use colored versions by using the <span class="txt-primary">.alert-x</span> class, where x is the name of the color.</p>
       <div class="alerts">
         <div class="alert">Default alert - Lorem ipsum dolor sit amet.</div>
-        <div class="alert-teal mt-1">Teal alert - Lorem ipsum dolor sit amet.</div>
+        <div class="alert-primary mt-1">primary alert - Lorem ipsum dolor sit amet.</div>
         <div class="alert-error mt-1 rounded-xs">Error alert - Lorem ipsum dolor sit amet.</div>
-        <div class="alert-navy mt-1 rounded-xs">Navy alert - Lorem ipsum dolor sit amet.</div>
+        <div class="alert-secondary mt-1 rounded-xs">secondary alert - Lorem ipsum dolor sit amet.</div>
         <div class="alert-white mt-1 rounded-xs">White alert - Lorem ipsum dolor sit amet.</div>
       </div><br/>
       <p class="mt-2 font-sm link" onclick="toggle_code('alerts')">show code</p>
       <pre><code class="lang-html target alerts_target"></code></pre>
       <h2 id="toasts" class="pt-5 mb-3 font-md mt-3">Toasts</h2>
-      <p class="font-sm mt-3 mb-3">To create toast notifications add the <span class="txt-teal">.toast</span> class to an element. Inside you should put two elements:<br/><span class="txt-teal">.title</span> - the title bar of the toast<br/><span class="txt-teal">.body</span> - the body of the toast</p>
+      <p class="font-sm mt-3 mb-3">To create toast notifications add the <span class="txt-primary">.toast</span> class to an element. Inside you should put two elements:<br/><span class="txt-primary">.title</span> - the title bar of the toast<br/><span class="txt-primary">.body</span> - the body of the toast</p>
       <div class="toasts row" style="gap: 14px;">
         <div class="toast">
           <div class="title"><span>&nbsp;<i class="fa fa-bell txt-warn-dark-2 font-xs"></i>&nbsp;Notification - Just now</span><i class="mr-1 fa fa-close txt-error"></i></div>
@@ -400,14 +420,14 @@
         </div>
         <div class="toast">
           <div class="title"><span>&nbsp;Remember! - 5 min ago</span></div>
-          <div class="body bg-navy-light-3">Drink water!</div>
+          <div class="body bg-secondary-light-3">Drink water!</div>
         </div>
       </div><br/>
       <p class="mt-2 font-sm link" onclick="toggle_code('toasts')">show code</p>
       <pre><code class="lang-html target toasts_target"></code></pre>
       <h2 id="contact" class="pt-5 mb-3 font-md mt-3">Contact</h2>
-      <a href="https://github.com/Mateusz-Szymkiewicz1/uzbek.css" target="_blank"><i class="fa fa-github font-md mr-1"></i><span class="txt-teal font-sm">Project's repository</span></a><br/><br/>
-      <a href="mailto:szymkiewiczmateusz1@gmail.com"><i class="fa fa-envelope font-md mr-1"></i><span class="txt-teal font-sm">Contact e-mail</span></a>
+      <a href="https://github.com/Mateusz-Szymkiewicz1/uzbek.css" target="_blank"><i class="fa fa-github font-md mr-1"></i><span class="txt-primary font-sm">Project's repository</span></a><br/><br/>
+      <a href="mailto:szymkiewiczmateusz1@gmail.com"><i class="fa fa-envelope font-md mr-1"></i><span class="txt-primary font-sm">Contact e-mail</span></a>
     </div>
     <hr style="clear:both;border:0;" class="mb-4">
 </body>

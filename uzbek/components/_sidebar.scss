@@ -1,0 +1,21 @@
+.sidebar{
+  background: map-get($colors,"primary");
+  height: 100%;
+  width: 240px;
+  position: fixed;
+  color: white;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.sidebar-right{
+  @extend .sidebar;
+  right: 0;
+}
+
+.sidebar-left{
+  @extend .sidebar;
+  left: 0;
+}
