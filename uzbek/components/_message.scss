@@ -1,0 +1,36 @@
+.message, .message-right, .message-left{
+  width: fit-content;
+  max-width: 90%;
+  border-radius: 15px;
+  background: map-get($colors,"primary");
+  color: #fff;
+  padding: 12px;
+  font-size: $base-font-size;
+  position: relative;
+}
+
+@mixin message-before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 15px solid map-get($colors,"primary");
+  border-right: 15px solid transparent;
+  border-top: 15px solid map-get($colors,"primary");
+  border-bottom: 15px solid transparent;
+  top: 0px;
+}
+
+.message:before, .message-right:before{
+  @include message-before;
+  right: -16px;
+}
+
+.message-left:before{
+  @include message-before;
+  left: -17px;
+  border-left: 15px solid transparent;
+  border-right: 15px solid map-get($colors,"primary");
+  border-top: 15px solid map-get($colors,"primary");
+  border-bottom: 15px solid transparent;
+}
