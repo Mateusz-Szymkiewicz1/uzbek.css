@@ -17,5 +17,34 @@
     "url": "https://github.com/Mateusz-Szymkiewicz1/uzbek.css.git"
   },
   "homepage": "https://mateusz-szymkiewicz1.github.io/uzbek.css",
-  "keywords": ["css", "library", "uzbek", "modern", "flexbox", "grid", "responsive", "windows", "retro", "tailwind", "bulma", "bootstrap", "classes", "utility", "components", "easy", "lightweight", "html", "mobile", "sass", "scss"]
+  "keywords": [
+    "css",
+    "library",
+    "uzbek",
+    "modern",
+    "flexbox",
+    "grid",
+    "responsive",
+    "windows",
+    "retro",
+    "tailwind",
+    "bulma",
+    "bootstrap",
+    "classes",
+    "utility",
+    "components",
+    "easy",
+    "lightweight",
+    "html",
+    "mobile",
+    "sass",
+    "scss"
+  ],
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-purgecss": "^5.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.63.6"
+  }
 }

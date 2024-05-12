@@ -84,6 +84,22 @@
   }
 }
 
+@media(max-width: 400px) {
+  .cookies{
+   right: 20px;
+   left: 20px;
+  }
+  .cookies .btn:first-of-type{
+    width: 100px;
+  }
+}
+
+@media(max-width: 600px) {
+  .footer a{
+    font-size: 22px;
+  }
+}
+
 @media(max-width: 840px) {
   .code{
     flex-direction: column;
