@@ -92,6 +92,10 @@
   .cookies .btn:first-of-type{
     width: 100px;
   }
+  .toast{
+    width: 300px;
+    font-size: 21px;
+  }
 }
 
 @media(max-width: 600px) {
@@ -143,9 +147,6 @@
   }
   p.bg-primary i{
     display: none;
-  }
-  .or,.css_import{
-    margin:0;
   }
   .code{
     margin-right: 20px;
